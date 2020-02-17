@@ -4,13 +4,13 @@ const Schema   = mongoose.Schema;
 const userSchema = new Schema({
 
   city: {
-    type: String,
+    type: [String],
     enum:[`Madrid`,`Barcelona`,`Valencia`, `Sevilla`, `Bilbao`, `Zamora`]
   },
   // loc: { type: "Point", coordinates: [ latitude , longitude ] },
   job:{
-    type: String,
-    enum: ["Jardineria", "Limpieza", "Reparacion","Cuidador" ],
+    type: [String],
+    enum: ["Jardineria", "Limpieza", "Reparacion","Cuidador"],
   },
   photo: {
     type: String,
@@ -18,12 +18,14 @@ const userSchema = new Schema({
   },
   dayStart: Date,
   dayEnd: Date,
-  estatus: {
-    type: String,
+  status: {
+    type: [String],
     enum: ["active", "in process", "end"],
     default: "active"
   },
-  User: {type: Schema.Types.ObjectId, ref:"User"}
+  user: {
+    type: Schema.Types.ObjectId, 
+    ref: "User"}
 
 });
 

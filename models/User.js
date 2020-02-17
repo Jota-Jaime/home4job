@@ -19,9 +19,8 @@ const userSchema = new Schema({
     default: `Sin experiencias previas.`
   },
   languages: {
-    type: String,
-    enum: [`español`, `inglés`, `portugués`, `francés`, `alemán`, `italiano`, `otro`],
-
+    type: [String],
+    enum: [`español`, `inglés`, `portugués`, `francés`, `alemán`, `italiano`, `otro`]
   }
 });
 
