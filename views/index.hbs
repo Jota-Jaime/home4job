@@ -1,2 +1,59 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+   <nav class="landingNav">
+    <a href="/auth/login">Login</a>
+    <a href="/auth/signup">Signup</a>
+    <a href="/auth/logout">Logout</a>
+  </nav>
+  <section class="landingContainer">
+    <form action="/offer/home" method="GET">
+      <div class="citySelector">
+        <label for="city">Elige una ciudad</label>
+        <select name="city" id="citySelector">
+          <option value="Madrid">Madrid</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Valencia">Valencia</option>
+          <option value="Sevilla">Sevilla</option>
+          <option value="Bilbao">Bilbao</option>
+          <option value="Zamora">Zamora</option>
+        </select>
+      </div>
+      <div class="dates">
+        <label for="from">Desde</label>
+        <input type="date" name="from">
+        <label for="to">Hasta</label>
+        <input type="date" name="to">
+      </div>    
+      <div class="jobToDo">
+      <label for="job">Trabajo a realizar</label>
+        <select name="job" id="jobSelector">
+          <option value="Jardinero">Jardinero</option>
+          <option value="Limpieza">Limpeza</option>
+          <option value="Reparacion">Reparación</option>
+          <option value="Cuidador">Cuidador</option>
+        </select>
+      </div>
+        <button class="greenbutton" type="submit">Buscar ofertas</button>
+    </form>
+    <div class="info">
+      <h1>Bienvenido a Home4Job</h1>
+      <h2>No lo dudes más y empieza a ahorrar en tus viajes.</h2>
+      <p>Cónoce otras ciudades ahorrando en el alojamiento. A cambio ayudarás con tareas cotidianas a tus afitriones.</p>
+      <p>Una oportunidad única para viajar, conocer gente y ahorrar dinero.</p>
+      <a class="greenbutton" href="/auth/login"><h3>Entrar</h3></a>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>Texto a rellenar y movidas varias</p>
+  </footer>
+  <script src="/javascripts/script.js"></script>
+</body>
+</html>
