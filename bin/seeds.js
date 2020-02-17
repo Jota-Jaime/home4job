@@ -21,7 +21,9 @@ mongoose
 function startSeeding() {
 
   User.deleteMany().then(() => Offer.deleteMany()).then(() => {
-    let users = [{
+    
+    let users = [
+      {
         username: `michellemullen@gmail.com`,
         password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
         name: `Michelle B. Mullen`,
@@ -29,7 +31,7 @@ function startSeeding() {
         averageValue: `4`,
         avatar: `../img/default.png`,
         preferences: [],
-        languages: [`inglés`, `español`],
+        languages: ['inglés', 'español'],
       },
       {
         username: `karolinabt@gmail.com`,
@@ -39,7 +41,7 @@ function startSeeding() {
         averageValue: `5`,
         avatar: `../img/default.png`,
         preferences: [],
-        languages: [`inglés`, `alemán`],
+        languages: ['inglés', 'alemán'],
       },
       {
         username: `markofaber@gmail.com`,
@@ -49,7 +51,7 @@ function startSeeding() {
         averageValue: `3`,
         avatar: `../img/default.png`,
         preferences: [],
-        languages: [`inglés`, `alemán`],
+        languages: ['inglés', 'alemán'],
       },
       {
         username: `victorinboileau@gmail.com`,
@@ -59,9 +61,9 @@ function startSeeding() {
         averageValue: `5`,
         avatar: `../img/default.png`,
         preferences: [],
-        languages: [`inglés`, `francés`, `español`],
+        languages: ['inglés', 'francés', 'español'],
       },
-
+    
       {
         username: `macialmontoyaespino@gmail.com`,
         name: `Maciel Montoya Espino`,
@@ -70,7 +72,7 @@ function startSeeding() {
         averageValue: `5`,
         avatar: `../img/default.png`,
         preferences: [],
-        languages: [`inglés`, `alemán`, `francés`, `español`, `portugués`, `italiano`],
+        languages: ['inglés', 'alemán', 'francés', 'español', 'portugués', 'italiano'],
       },
       {
         username: `darkobrasanack@gmail.com`,
@@ -80,7 +82,7 @@ function startSeeding() {
         averageValue: `4`,
         avatar: `../img/default.png`,
         preferences: [],
-        languages: [`inglés`, `español`],
+        languages: ['inglés', 'español'],
       },
       {
         username: `georgebestn@gmail.com`,
@@ -90,7 +92,7 @@ function startSeeding() {
         averageValue: `4`,
         avatar: `../img/default.png`,
         preferences: [],
-        languages: [`inglés`],
+        languages: ['inglés'],
       },
       {
         username: `madnielsen@gmail.com`,
@@ -100,9 +102,100 @@ function startSeeding() {
         averageValue: `4`,
         avatar: `../img/default.png`,
         preferences: [],
-        languages: [`inglés`, `alemán`],
+        languages: ['inglés','alemán'],
+      },
+      {
+        username: `juancarlosaragon@gmail.com`,
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
+        name: `Juan Carlos Aragon`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint hic minus error laborum natus voluptatibus facere. Accusamus possimus velit, numquam, vel deserunt, voluptates consectetur quae voluptatem dolores ea id?`,
+        averageValue: `4`,
+        avatar: `../img/default.png`,
+        preferences: [],
+        languages: [`inglés`, `español`, `francés`],
+      },
+      {
+        username: `guillermosara@gmail.com`,
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
+        name: `Guillermo Sara`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint hic minus error laborum natus voluptatibus facere. Accusamus possimus velit, numquam, vel deserunt, voluptates consectetur quae voluptatem dolores ea id?`,
+        averageValue: `4`,
+        avatar: `../img/default.png`,
+        preferences: [],
+        languages: [`inglés`, `español`, `italiano`],
+      },
+      {
+        username: `oswaldoponce@gmail.com`,
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
+        name: `Oswaldo Ponce`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint hic minus error laborum natus voluptatibus facere. Accusamus possimus velit, numquam, vel deserunt, voluptates consectetur quae voluptatem dolores ea id?`,
+        averageValue: `4`,
+        avatar: `../img/default.png`,
+        preferences: [],
+        languages: [`inglés`, `español`],
+      },
+      {
+        username: `tomadueñastrujillo@gmail.com`,
+        name: `Tomás Dueñas Trujillo`,
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint hic minus error laborum natus voluptatibus facere. Accusamus possimus velit, numquam, vel deserunt, voluptates consectetur quae voluptatem dolores ea id?`,
+        averageValue: `5`,
+        avatar: `../img/default.png`,
+        preferences: [],
+        languages: [`inglés`, `español`],
+      },
+      {
+        username: `mercedebalderavergara@gmail.com`,
+        name: `Mercedes Balderas Vergara`,
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint hic minus error laborum natus voluptatibus facere. Accusamus possimus velit, numquam, vel deserunt, voluptates consectetur quae voluptatem dolores ea id?`,
+        averageValue: `4`,
+        avatar: `../img/default.png`,
+        preferences: [],
+        languages: [`inglés`, `español`],
+      },
+      {
+        username: `manolosantander@gmail.com`,
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
+        name: `Manolo Santander`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint hic minus error laborum natus voluptatibus facere. Accusamus possimus velit, numquam, vel deserunt, voluptates consectetur quae voluptatem dolores ea id?`,
+        averageValue: `4`,
+        avatar: `../img/default.png`,
+        preferences: [],
+        languages: [`inglés`, `español`],
+      },
+      {
+        username: `davidalbelda@gmail.com`,
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
+        name: `David Albelda`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint hic minus error laborum natus voluptatibus facere. Accusamus possimus velit, numquam, vel deserunt, voluptates consectetur quae voluptatem dolores ea id?`,
+        averageValue: `4`,
+        avatar: `../img/default.png`,
+        preferences: [],
+        languages: [`inglés`, `español`],
+      },
+      {
+        username: `joangarcia@gmail.com`,
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
+        name: `Joan Garcia`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint hic minus error laborum natus voluptatibus facere. Accusamus possimus velit, numquam, vel deserunt, voluptates consectetur quae voluptatem dolores ea id?`,
+        averageValue: `4`,
+        avatar: `../img/default.png`,
+        preferences: [],
+        languages: [`inglés`, `español`],
+      },
+      {
+        username: `joseguerrero@gmail.com`,
+        password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
+        name: `Jose Guerrero`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem sint hic minus error laborum natus voluptatibus facere. Accusamus possimus velit, numquam, vel deserunt, voluptates consectetur quae voluptatem dolores ea id?`,
+        averageValue: `4`,
+        avatar: `../img/default.png`,
+        preferences: [],
+        languages: [`inglés`, `español`, `alemán`],
       },
     ]
+    
 
     let offers = [{
         city: "Madrid",

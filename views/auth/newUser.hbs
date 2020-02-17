@@ -1,0 +1,21 @@
+<section class="usercontainer">
+  <h1>new user</h1>
+
+ <form action="/auth/newUser" method="POST" id="">
+  <label for="name">name</label>
+  <input id="name" type="text" name="name" placeholder="Insert your name">
+
+  <br><br>
+
+  <label for="descripcion">Descripcion</label>
+  <input id="" type="text" name="password" placeholder="insert a description of you">
+  <br>
+  {{#if message }}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+
+  <br><br>
+
+  <button>Crear perfil</button>
+</form>
+</section>

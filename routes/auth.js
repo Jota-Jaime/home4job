@@ -11,6 +11,10 @@ router.get("/login", (req, res, next) => {
   res.render("auth/login", { "message": req.flash("error") });
 });
 
+router.get("/newuser", (req, res, next) => {
+  res.render("auth/newUser", { "message": req.flash("error") });
+});
+
 router.post("/login", passport.authenticate("local", {
   successRedirect: "/",
   failureRedirect: "/auth/login",
