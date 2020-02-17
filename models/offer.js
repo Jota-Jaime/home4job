@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
-
 const userSchema = new Schema({
-
   city: {
     type: String,
     enum:[`Madrid`,`Barcelona`,`Valencia`, `Sevilla`, `Bilbao`, `Zamora`]
@@ -24,8 +22,12 @@ const userSchema = new Schema({
     default: "active"
   },
   User: {type: Schema.Types.ObjectId, ref:"User"}
-
+}, 
+{
+  timestamps: {
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
+  }
 });
-
 const Offer = mongoose.model('Offer', userSchema);
 module.exports = Offer;
