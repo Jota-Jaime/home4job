@@ -1,25 +1,19 @@
+<section class="usercontainer">
 
-<h2>Login</h2>
-
-<form action="/auth/login" method="POST" id="form-container">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
-
-  <br><br>
-
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-  <br>
-  {{#if message }}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
-
-  <br><br>
-
-  <button>Login</button>
+  <form action="/auth/login" method="POST" id="form-container">
+  <h2>Iniciar sesión</h2>
+    <label for="username">Email</label>
+    <input id="username" type="text" name="username" placeholder="Introduce tu email...">
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password" placeholder="Introduce tu contraseña...">
+    {{#if message }}
+      <div class="error-message">{{ message }}</div>
+    {{/if}}
+  <button class="greenbutton">Inciar sesión</button>
 
   <p class="account-message">
-    Don't have an account yet?
-    <a href="/auth/signup">Signup</a>
+    ¿Aún no tienes una cuenta?
+    <a href="/auth/signup">Crear cuenta</a>
   </p>
-</form>
+  </form>
+</section>
