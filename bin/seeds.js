@@ -29,6 +29,13 @@ let users = [
   }
 ]
 
+
+
+
+
+
+
+
 User.deleteMany()
 .then(() => {
   return User.create(users)
