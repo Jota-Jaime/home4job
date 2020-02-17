@@ -15,17 +15,13 @@ const userSchema = new Schema({
   },
   description: String,
   avarageValue: {
-    tipe: Number,
+    type: String,
     default: `Sin experiencias previas.`
   },
   languages: {
     type: String,
     enum: [`español`, `inglés`, `portugués`, `francés`, `alemán`, `italiano`, `otro`],
 
-  },
-  timestamps: {
-    createdAt: 'created_at',
-    updatedAt: 'updated_at'
   }
 });
 

@@ -1,10 +1,9 @@
-// primary color: #3D8785
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:800&display=swap");
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Nanum Gothic', sans-serif;
-}
+  font-family: 'Nanum Gothic', sans-serif; }
+
 .landingNav {
   width: 100%;
   height: 5rem;
@@ -17,24 +16,19 @@ body {
   opacity: 0.2;
   transition: all .4s;
   border-bottom: 1px solid black;
-  -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-  box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-    &:hover{
-      opacity: 0.9;
-  }
-
-  a {
+  -webkit-box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75); }
+  .landingNav:hover {
+    opacity: 0.9; }
+  .landingNav a {
     font-size: 1.3rem;
     margin: 3rem;
-    color: #ffffff;
-  }
-}
+    color: #ffffff; }
 
 a {
   color: #00B7FF;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .greenbutton {
   background-color: #3D8785;
@@ -44,19 +38,17 @@ a {
   width: 40%;
   text-align: center;
   border-radius: 20px;
-  border: 1px solid black;
-}
+  border: 1px solid black; }
 
-.landingContainer{
+.landingContainer {
   background-image: url(../images/bg.jpg);
   background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  
-  form {
+  align-items: center; }
+  .landingContainer form {
     font-size: 1.3rem;
     display: flex;
     flex-direction: column;
@@ -67,42 +59,31 @@ a {
     opacity: .9;
     border-radius: 20px;
     border: 0.5px solid black;
-    -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-    box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-
-    .citySelector {
+    -webkit-box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75); }
+    .landingContainer form .citySelector {
       display: flex;
-      justify-content: space-between;
-      
-      select {
+      justify-content: space-between; }
+      .landingContainer form .citySelector select {
         width: 50%;
         font-size: 1rem;
-        margin-bottom: 1rem;
-      }
-    }
-    .dates {
+        margin-bottom: 1rem; }
+    .landingContainer form .dates {
       display: flex;
       justify-content: space-between;
       margin-bottom: 1rem;
-      width: 100%;
-
-      input {
-        font-size: 1rem;
-      }
-    }
-    .jobToDo {
+      width: 100%; }
+      .landingContainer form .dates input {
+        font-size: 1rem; }
+    .landingContainer form .jobToDo {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 1rem;
-
-      select {
+      margin-bottom: 1rem; }
+      .landingContainer form .jobToDo select {
         width: 50%;
-        font-size: 1rem;
-      }
-    }
-  }
-  .info {
+        font-size: 1rem; }
+  .landingContainer .info {
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -112,11 +93,9 @@ a {
     opacity: .9;
     border-radius: 20px;
     border: 0.5px solid black;
-    -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-    box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-  }
-}
+    -webkit-box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75); }
 
 .footer {
   background-color: #3D8785;
@@ -125,5 +104,6 @@ a {
   height: 5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
+
+/*# sourceMappingURL=style.css.map */
