@@ -17,7 +17,7 @@ mongoose
   });
 
 
-let User = [
+let user = [
   {
     username: `michellemullen@gmail.com`,
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
@@ -101,7 +101,7 @@ let User = [
   },
 ]
 
-let Offer = [
+let offers = [
   {
     city: "Madrid",
     job:"Jardineria",

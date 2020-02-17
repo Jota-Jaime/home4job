@@ -24,12 +24,7 @@ const userSchema = new Schema({
     default: "active"
   },
   User: {type: Schema.Types.ObjectId, ref:"User"}
-}, 
-{
-  timestamps: {
-    createdAt: 'created_at',
-    updatedAt: 'updated_at'
-  }
+
 });
 
 const Offer = mongoose.model('Offer', userSchema);
