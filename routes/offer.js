@@ -13,7 +13,9 @@ router.get("/", (req, res, next) => {
 });
 
 router.get('/:id', (req,res,next) => {
-  Offer.findById(req.params.id).then((foundOffer) =>{
+  Offer.findById(req.params.id)
+  .populate('user')
+  .then((foundOffer) =>{
     res.json(foundOffer);
   });
 });

@@ -1,6 +1,26 @@
 <section class="home">
 <div class="foundOffers">
-  <a class="newOfferLink"href="/newOffer">Publica una nueva oferta +</a>
+  <a class="newOfferLink"href="/newOffer">Publicar una nueva oferta +</a>
+  <div class="filters">
+    <label for="cities">Ciudad</label>
+    <select name="city" id="citySelector">
+      <option value="all">Todas</option>
+      <option value="Madrid">Madrid</option>
+      <option value="Barcelona">Barcelona</option>
+      <option value="Valencia">Valencia</option>
+      <option value="Sevilla">Sevilla</option>
+      <option value="Bilbao">Bilbao</option>
+      <option value="Zamora">Zamora</option>
+    </select>
+    <label for="jobs">Trabajos</label>
+    <select name="job" id="jobSelector">
+      <option value="all">Todas</option>
+      <option value="Jardineria">Jardinería</option>
+      <option value="Limpieza">Limpeza</option>
+      <option value="Reparacion">Reparación</option>
+      <option value="Cuidador">Cuidador</option>
+    </select>
+  </div>
   {{#each allOffers}}
   <div class="offerCard">
     <h3>{{city}}<span>    ({{job}})</span></h3>
