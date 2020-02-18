@@ -11,20 +11,27 @@ router.get("/login", (req, res, next) => {
   res.render("auth/login", { "message": req.flash("error") });
 });
 
-router.get("/newuser", (req, res, next) => {
-  res.render("auth/newUser", { "message": req.flash("error") });
+
+router.get('/newuser', (req, res, next) => {
+
+  User.findById(id)
+      .then(user=> {
+          res.render('auth/newUser', { user });
+      });
 });
 
 router.post("/login", passport.authenticate("local", {
-  successRedirect: "/offer/home",
+  successRedirect: "/offer",
   failureRedirect: "/auth/login",
   failureFlash: true,
   passReqToCallback: true
 }));
 
-router.post('/newuser/:id', (req, res, next) => {
+
+router.post('/newuser', (req, res, next) => {
+  let id=req.body.id
   User.findByIdAndUpdate(
-      req.body.id,
+      id,
       {
           name: req.body.name,
          description: req.body.description,
@@ -32,7 +39,7 @@ router.post('/newuser/:id', (req, res, next) => {
       { new: true }
   )
       .then(() => {
-          res.redirect('offer/home');
+          res.redirect('/offer/home');
       });
 });
 
@@ -65,7 +72,8 @@ router.post("/signup", (req, res, next) => {
 
     newUser.save()
     .then(() => {
-      res.redirect("/auth/newuser");
+      // res.json(newUser)
+      res.redirect(`/auth/newUser`);
     })
     .catch(err => {
       res.render("auth/signup", { message: "Something went wrong" });
