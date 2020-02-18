@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
@@ -6,7 +8,7 @@ const Offer = require("../models/Offer");
 const bcryptSalt = 10;
 
 mongoose
-  .connect('mongodb://localhost/h4j', {
+  .connect(`${process.env.DBURL}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
