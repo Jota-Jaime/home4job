@@ -73,6 +73,9 @@ app.use(session({
 app.use(flash());
 require('./passport')(app);
     
+const offerRoutes = require('./routes/offer');
+app.use('/offer', offerRoutes);
+      
 
 const index = require('./routes/index');
 app.use('/', index);
@@ -80,8 +83,5 @@ app.use('/', index);
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
 
-// const offerRoutes = require('./routes/offer');
-// app.use('/offer', offerRoutes);
-      
 
 module.exports = app;

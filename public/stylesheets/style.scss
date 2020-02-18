@@ -3,6 +3,11 @@
 // primary light: #6abcba
 
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -148,8 +153,6 @@ a {
   align-items: center;
   margin: auto, 4rem;
   background-color: #ffffff;
-  opacity: 0.7;
-  transition: all .4s;
   border-bottom: 1px solid black;
   -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
@@ -199,4 +202,58 @@ a {
     }
 
   }
+}
+
+.home {
+  display: flex;
+}
+
+.foundOffers {
+  background-color: #3D8785;
+  width: 25%;
+  padding: 5rem 0 5rem 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid black;
+
+  .newOfferLink {
+    background-color: #0c1b1b;
+    width: 100%;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+.offerCard {
+  background-color: #6abcba;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
+
+  &:hover {
+    cursor:pointer;
+  }
+
+
+  img {
+    border-radius: 15px;
+    border: 1px solid black
+  }
+}
+
+.offerDetails {
+  width: 75%;
+  padding: 7rem 2rem 5rem 2rem;
+  
 }
