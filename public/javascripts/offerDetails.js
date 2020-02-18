@@ -44,13 +44,7 @@ offerCardsArray.forEach(card => {
 
       let userAvatar = document.createElement('img');
       userAvatar.setAttribute("src", `${offerPayload.user.avatar}`);
-      userOfferContainer.appendChild(userAvatar)
-
-
-
-
-
-      
+      userOfferContainer.appendChild(userAvatar);
     }) 
   });
 }) 
