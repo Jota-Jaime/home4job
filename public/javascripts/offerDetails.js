@@ -1,5 +1,9 @@
 const offerCardsArray = document.querySelectorAll(`.offerCard`);
 const offerDetails = document.querySelector(`.offerDetails`);
+const offerFoundsContainer = document.querySelector('.foundOffers');
+const citySelector = document.querySelector('.citySelector');
+const jobSelector = document.querySelector('.jobSelector');
+
 
 offerCardsArray.forEach(card => {
   card.addEventListener('click', function () {
@@ -47,5 +51,35 @@ offerCardsArray.forEach(card => {
       userOfferContainer.appendChild(userAvatar);
     }) 
   });
-}) 
+})
+
+function filterCity () {
+  const citySelectorValue = citySelector.value
+  axios.get(`/offers/${citySelectorValue}`)
+  .then(offers => {
+    offerFoundsContainer.innerHTML = "";
+    let offersPayload = offers.data;
+
+    offersPayload.forEach(offer => {
+
+      let offerCard = document.createElement('div');
+      offerCard.classList.add('offerCard');
+      offerCard.innerHTML =
+      `<h3>${offer.city[0]}</h3><span>${offer.job[0]}</span>
+      <img src="${offer.photo}" alt="offerPhoto">
+      <form action="" class="offerdetailsSelector">
+        <input type="hidden" class="id" value="{{_id}}">
+      </form>`
+      offerFoundsContainer.appendChild(offerCard);
+    })
+
+  })  
+
+
+}
+
+function filterJob () {
+  offerFoundsContainer.innerHTML = "";
+}
+
 

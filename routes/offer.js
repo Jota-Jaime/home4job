@@ -20,4 +20,13 @@ router.get('/:id', (req,res,next) => {
   });
 });
 
+router.get('/:city', (req,res,next) => {
+  let city = req.params.city
+  Offer.find(city, city)
+  .then((foundOffer) =>{
+    res.json(foundOffer);
+  });
+});
+
+
 module.exports = router;

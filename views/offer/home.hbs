@@ -1,9 +1,9 @@
 <section class="home">
-<div class="foundOffers">
+<div class="aside">
   <a class="newOfferLink"href="/newOffer">Publicar una nueva oferta +</a>
   <div class="filters">
     <label for="cities">Ciudad</label>
-    <select name="city" id="citySelector">
+    <select name="city" class="citySelector" onchange="filterCity()">
       <option value="all">Todas</option>
       <option value="Madrid">Madrid</option>
       <option value="Barcelona">Barcelona</option>
@@ -13,7 +13,7 @@
       <option value="Zamora">Zamora</option>
     </select>
     <label for="jobs">Trabajos</label>
-    <select name="job" id="jobSelector">
+    <select name="job" class="jobSelector" onchange="filterJob()">
       <option value="all">Todas</option>
       <option value="Jardineria">Jardinería</option>
       <option value="Limpieza">Limpeza</option>
@@ -21,15 +21,17 @@
       <option value="Cuidador">Cuidador</option>
     </select>
   </div>
-  {{#each allOffers}}
-  <div class="offerCard">
-    <h3>{{city}}<span>    ({{job}})</span></h3>
-    <img src="{{photo}}" alt="offerPhoto">
-      <form action="" class="offerdetailsSelector">
-        <input type="hidden" class="id" value="{{_id}}">
-       </form>
+  <div class="foundOffers">
+    {{#each allOffers}}
+    <div class="offerCard">
+      <h3>{{city}}<span>    ({{job}})</span></h3>
+      <img src="{{photo}}" alt="offerPhoto">
+        <form action="" class="offerdetailsSelector">
+          <input type="hidden" class="id" value="{{_id}}">
+        </form>
+    </div>
+    {{/each}}
   </div>
-  {{/each}}
 </div>
 <div class="offerDetails">
   <h1>Selecciona una de nuestras ofertas para comenzar tu viaje</h1>
