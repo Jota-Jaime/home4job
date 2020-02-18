@@ -16,11 +16,26 @@ router.get("/newuser", (req, res, next) => {
 });
 
 router.post("/login", passport.authenticate("local", {
-  successRedirect: "/",
+  successRedirect: "/offer/home",
   failureRedirect: "/auth/login",
   failureFlash: true,
   passReqToCallback: true
 }));
+
+router.post('/newuser/:id', (req, res, next) => {
+  User.findByIdAndUpdate(
+      req.body.id,
+      {
+          name: req.body.name,
+         description: req.body.description,
+      },
+      { new: true }
+  )
+      .then(() => {
+          res.redirect('offer/home');
+      });
+});
+
 
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
@@ -50,7 +65,7 @@ router.post("/signup", (req, res, next) => {
 
     newUser.save()
     .then(() => {
-      res.redirect("/");
+      res.redirect("/auth/newuser");
     })
     .catch(err => {
       res.render("auth/signup", { message: "Something went wrong" });
