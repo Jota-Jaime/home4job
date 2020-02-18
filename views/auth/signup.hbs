@@ -1,23 +1,75 @@
+<section class="usercontain">
 
-<section class="usercontainer">
-  
 
   <form action="/auth/signup" method="POST" id="form-container">
-  <h2>Crea tu cuenta en unos segundos</h2>
-    <label for="username">Email</label>
-    <input id="username" type="email" name="username" placeholder="Introduce tu email...">
-    <label for="password">Password</label>
-    <input id="password" type="password" name="password" placeholder="Introduce tu contraseña...">
-     {{#if message }}
+    <h2>Crea tu cuenta en unos segundos</h2>
+    <div class="tot">
+      <div class="left">
+        <div class="name">
+          <div class="izq">
+            <label for="username">Email</label>
+          </div>
+          <input id="username" type="email" name="username" placeholder="Introduce tu email..." class="text">
+        </div>
+        <div class="name">
+          <div class="izq">
+            <label for="password">Password</label>
+          </div>
+          <input id="password" type="password" name="password" placeholder="Introduce tu contraseña..." class="text">
+        </div>
+        <div class="name">
+          <div class="izq">
+            <label for="name">Nombre</label>
+          </div>
+          <div>
+            <input id="name" type="text" name="name" placeholder="Insert your name" class="text">
+          </div>
+        </div>
+
+        <div class="idioma">
+          <div class="izq">
+            <label for="">Idioma</label>
+          </div>
+          <div class="tr">
+            <ul class="ul">
+              <li><input type="checkbox" id="español" name="español" value="español">Español</li>
+              <li><input type="checkbox" id="ingles" name="ingles" value="inglés">Ingles </li>
+              <li><input type="checkbox" id="frances" name="frances" value="francés">Frances</li>
+              <li> <input type="checkbox" id="aleman" name="aleman" value="alemán">Aleman</li>
+              <li><input type="checkbox" id="portugues" name="portugues" value="portugués">Portugues</li>
+              <li><input type="checkbox" id="italiano" name="italiano" value="italiano">Italiano</li>
+              <li><input type="checkbox" id="otros" name="otros" value="otros">Otros</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="photo">
+          <label>Foto</label>
+          <img src="/images/default.png" alt="default">
+          <img src="{{user.imgPath}}" alt="{{user.name}}">
+          <input type="file" name="photo">
+        </div>
+        <div class="descripcion">
+          <label for="description">Descripcion</label>
+          <textarea name="description" for="description" id="" cols="60" rows="6"
+            placeholder="Escribe algo sobre ti en ..." maxlength="300" value></textarea>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    {{#if message }}
     <div class="error-message">{{ message }}</div>
     {{/if}}
 
-     {{!-- <a href="/auth/login">Inciar sesión</a> --}}
     <button class="greenbutton">Crear</button>
 
     <p class="account-message">
-    ¿Ya tienes una cuenta?
-    <a href="/auth/login">Inciar sesión</a>
+      ¿Ya tienes una cuenta?
+      <a href="/auth/login">Inciar sesión</a>
     </p>
   </form>
 </section>

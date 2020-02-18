@@ -330,7 +330,7 @@ a {
 
     .greenbutton{
       width: 20%;
-      margin-bottom:10px ;
+      margin-bottom: -15px;
     }
     div{
       font-size: 2rem;
@@ -342,56 +342,55 @@ a {
       .left{
         display: flex;
         flex-direction: column;
-        height: 80%;
+        height: 100%;
         width: 50%;
         justify-content: space-around;
         .izq{
-          width: 40%;
-  
+          width: 30%;
+          justify-content: left;
+          padding-left: 10px;
         }
         .idioma{
           font-size: 1rem;
-          height: 50%;
+          height: 40%;
           display: flex;
-          justify-content: space-between;
+          justify-content: left;
           align-items: center;
   
          .tr{
-           flex-direction: column;
+           flex-direction: row;
+           justify-content: left;
            font-size: 1rem;
-           width: 55%;
-           height: 45%;
-           border: solid grey 1px;
-           margin-left: 75px;
-           margin-right: 75px;
-           padding: 10px 50px ;
+           width: 40%;
+           height: 60%;
            list-style: none;
            .ul{
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             display: flex;
+            flex-direction: column;
             list-style: none;
             flex-wrap: wrap;
             width: 100%;
             height: 100%;
-            border: 1px solid red
           }
-    
-         }
-  
-          
+         } 
         }
         .name{
-          height: 50%;
           flex-direction: row;
           justify-content: space-around;
+          border: solid red;
+          display: flex;
+
           .text{
+            justify-content: right;
             width: 80%;
-            height: 20%;
+            // height: 20%;
             font-size: 1rem;
-            padding: 0.5rem;
-            margin: 0.5rem;
+            padding-left: 0.5rem;
             border-radius: 10px;
+            border: solid red;
+            justify-content: left;
           }
         }
       }
