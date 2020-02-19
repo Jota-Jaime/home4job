@@ -9,10 +9,11 @@ const userSchema = new Schema({
   },
   password: String,
   name: String,
-  avatar: {
-    type: String,
-    default: `../images/default.png`
-  },
+  imgPath: String,
+  // {
+  //   type: String,
+  //   default: `../images/default.png`
+  // },
   description: String,
   avarageValue: {
     type: String,

@@ -4,7 +4,10 @@ const router = express.Router();
 const User = require("../models/User");
 const Offer = require("../models/Offer");
 const bcrypt = require("bcrypt");
+const multer = require('multer');
 const bcryptSalt = 10;
+const uploadCloud = require('../config/cloudinary.js');
+
 
 
 router.get("/login", (req, res, next) => {
@@ -14,15 +17,6 @@ router.get("/login", (req, res, next) => {
 });
 
 
-// router.get('/newuser', (req, res, next) => {
-//   let id = req.body.id
-//   User.findById(id)
-//     .then(user => {
-//       res.json(req.new)
-//       // res.render('auth/newUser', {user});
-//     });
-// });
-
 router.post("/login", passport.authenticate("local", {
   successRedirect: "/offer",
   failureRedirect: "/auth/login",
@@ -31,28 +25,17 @@ router.post("/login", passport.authenticate("local", {
 }));
 
 
-// router.post('/newuser', (req, res, next) => {
-//   let id = req.body.id
-//   User.findByIdAndUpdate((id), {
-//         name: req.body.name,
-//         description: req.body.description,
-//       }, {
-//         new: true
-//       }
-//     )
-//     .then(() => {
-//       res.redirect('/offer/home');
-//     });
-// });
-
-
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", (req, res, next) => {
+router.post("/signup", uploadCloud.single("photo"), (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
+  const name = req.body.name;
+  const description = req.body.description;
+  const languages = req.body.languages;
+  const imgPath = req.file.url;
   if (username === "" || password === "") {
     res.render("auth/signup", {
       message: "Indicate username and password"
@@ -78,13 +61,14 @@ router.post("/signup", (req, res, next) => {
       password: hashPass,
       name,
       description,
-      // idioma: []
+      languages,
+      imgPath,
     });
 
     newUser.save()
       .then(() => {
         // res.json(newUser)
-        // res.redirect(`/auth/newUser`);
+        res.redirect(`/offer`);
       })
       .catch(err => {
         res.render("auth/signup", {
