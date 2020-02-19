@@ -35,7 +35,6 @@ router.post("/signup", uploadCloud.single("photo"), (req, res, next) => {
   const name = req.body.name;
   const description = req.body.description;
   const languages = req.body.languages;
-  const imgPath = req.file.url;
   if (username === "" || password === "") {
     res.render("auth/signup", {
       message: "Indicate username and password"
@@ -62,13 +61,12 @@ router.post("/signup", uploadCloud.single("photo"), (req, res, next) => {
       name,
       description,
       languages,
-      imgPath,
     });
 
     newUser.save()
       .then(() => {
         // res.json(newUser)
-        res.redirect(`/offer`);
+        res.redirect(`/auth/login`);
       })
       .catch(err => {
         res.render("auth/signup", {
