@@ -77,6 +77,8 @@ require('./passport')(app);
 const offerRoutes = require('./routes/offer');
 app.use('/offer', offerRoutes);
       
+const userRoutes = require('./routes/user');
+app.use('/user', userRoutes);
 
 const index = require('./routes/index');
 app.use('/', index);

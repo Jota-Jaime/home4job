@@ -1,0 +1,59 @@
+<section class="usercontain">
+
+
+  <form action="/user/editUser" method="POST" id="form-container" enctype="multipart/form-data">
+    <h2>Crea tu cuenta en unos segundos</h2>
+    <div class="tot">
+      <div class="left">
+        <div class="name">
+          <div class="izq">
+            <label for="name">Nombre</label>
+          </div>
+          <div>
+            <input id="name" type="text" name="name" placeholder="Insert your name" class="text">
+          </div>
+        </div>
+
+        <div class="idioma">
+          <div class="izq">
+            <label for="">Idioma</label>
+          </div>
+          <div class="tr">
+            <ul class="ul">
+              <li><input type="checkbox" id="español" name="languages" value="español">Español</li>
+              <li><input type="checkbox" id="ingles" name="languages" value="inglés">Ingles </li>
+              <li><input type="checkbox" id="frances" name="languages" value="francés">Frances</li>
+              <li> <input type="checkbox" id="aleman" name="languages" value="alemán">Aleman</li>
+              <li><input type="checkbox" id="portugues" name="languages" value="portugués">Portugues</li>
+              <li><input type="checkbox" id="italiano" name="languages" value="italiano">Italiano</li>
+              <li><input type="checkbox" id="otros" name="languages" value="otros">Otros</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="photo">
+          <label>Foto</label>
+          {{!-- <img src="/images/default.png" alt="default">
+          <img src="{{user.imgPath}}" alt=""> --}}
+          <input type="file" name="photo">
+        </div>
+        <div class="descripcion">
+          <label for="description">Descripcion</label>
+          <textarea name="description" for="description" id="" cols="60" rows="6"
+            placeholder="Escribe algo sobre ti en ..." maxlength="300" value></textarea>
+        </div>
+
+      </div>
+    </div>
+    <button class="greenbutton">Crear</button>
+    {{#if message }}
+    <div class="error-message">{{ message }}</div>
+    {{/if}}
+
+    <p class="account-message">
+      ¿Ya tienes una cuenta?
+      <a href="/auth/login">Inciar sesión</a>
+    </p>
+  </form>
+</section>
