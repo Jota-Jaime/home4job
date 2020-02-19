@@ -8,7 +8,7 @@ const bcryptSalt = 10;
 
 router.get("/all", (req, res, next) => {
   Offer.find().then((allOffers) => {
-    res.render("offer/home", {allOffers});
+    res.render("offer/home", { allOffers, user});
   })
 });
 
