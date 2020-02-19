@@ -206,6 +206,7 @@ function startSeeding() {
         dayStart: 22 - 4 - 2020,
         dayEnd: 30 - 4 - 2020,
         estatus: "active",
+        location: [40.4297251,-3.6859807]
 
       },
       {
@@ -215,7 +216,7 @@ function startSeeding() {
         dayStart: 28 - 2 - 2020,
         dayEnd: 2 - 3 - 2020,
         estatus: "active",
-
+        location: [37.4060072,-5.9871337]
       },
       {
         city: "Madrid",
@@ -224,6 +225,7 @@ function startSeeding() {
         dayStart: 17 - 3 - 2020,
         dayEnd: 24 - 3 - 2020,
         estatus: "active",
+        location: [40.4598082,-3.7071957]
 
       },
       {
@@ -233,6 +235,7 @@ function startSeeding() {
         dayStart: 22 - 5 - 2020,
         dayEnd: 30 - 5 - 2020,
         estatus: "active",
+        location: [41.387802,2.1673753]
 
       },
       {
@@ -242,6 +245,7 @@ function startSeeding() {
         dayStart: 28 - 4 - 2020,
         dayEnd: 1 - 5 - 2020,
         estatus: "active",
+        location: [43.2622731,-2.9503671]
 
       },
       {
@@ -251,6 +255,7 @@ function startSeeding() {
         dayStart: 17 - 6 - 2020,
         dayEnd: 24 - 6 - 2020,
         estatus: "active",
+        location: [40.4338635,-3.6071526]
 
       },
       {
@@ -260,6 +265,7 @@ function startSeeding() {
         dayStart: 22 - 5 - 2020,
         dayEnd: 30 - 5 - 2020,
         estatus: "active",
+        location: [39.4759099,-0.3618022]
 
       },
       {
@@ -269,6 +275,7 @@ function startSeeding() {
         dayStart: 28 - 6 - 2020,
         dayEnd: 2 - 7 - 2020,
         estatus: "active",
+        location: [41.3780693,2.1230836]
       },
       {
         city: "Madrid",
@@ -277,6 +284,7 @@ function startSeeding() {
         dayStart: 19 - 3 - 2020,
         dayEnd: 26 - 3 - 2020,
         estatus: "active",
+        location: [40.4246511,-3.6741397]
       },
     ]
 

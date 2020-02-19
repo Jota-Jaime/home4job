@@ -7,7 +7,7 @@ const userSchema = new Schema({
     type: [String],
     enum:[`Madrid`,`Barcelona`,`Valencia`, `Sevilla`, `Bilbao`, `Zamora`]
   },
-  // loc: { type: "Point", coordinates: [ latitude , longitude ] },
+  location: [Number],
   job:{
     type: [String],
     enum: ["Jardineria", "Limpieza", "Reparacion","Cuidador"],
