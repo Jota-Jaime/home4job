@@ -32,8 +32,19 @@ offerCardsArray.forEach(card => {
 
       let mapDOMEl = document.createElement('div');
       mapDOMEl.setAttribute("id", "map");
-      mapDOMEl.innerHTML="Aquí un mapa de la hostia by GoogleMaps"
+      let map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: offerPayload.location[0], lng: offerPayload.location[1]},
+          zoom: 17
+        });
+        let marker = new google.maps.Marker({
+          position: {lat: offerPayload.location[0], lng: offerPayload.location[1]}, map: map,
+          animation: google.maps.Animation.DROP
+        });
+      } 
       offerDetails.appendChild(mapDOMEl);
+      initMap();
 
       let userOfferContainer = document.createElement(`div`);
       userOfferContainer.classList.add('userOfferContainer');
