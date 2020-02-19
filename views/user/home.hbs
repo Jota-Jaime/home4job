@@ -1,6 +1,25 @@
-<h1>woooolaaaaaa
-</h1>
-{{#each user}}
 
-   <a href="/user/editUser/{{user.id}}">user</a>
-</h2>
+
+
+<section class="usercontain">
+  <h1>perfil usuario</h1>
+{{#each foundUser}}
+<div>
+  <img src="{{imgPath}}" alt="{{name}}">
+  </div>
+<div>
+  <h1>{{name}}</h1>
+</div>
+<div>
+  <p>{{decription}}</p>
+</div>
+<div>{{languages}}</div>
+
+{{/each}}
+</section>
+
+
+
+<a href="/user/editUser/{{user.id}}">EDIT</a>
+<a href="/offer">back</a>
+ 
