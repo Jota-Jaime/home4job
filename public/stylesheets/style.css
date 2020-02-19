@@ -134,6 +134,24 @@ a {
     font-size: 1.3rem;
     margin: 3rem;
     color: #3D8785; }
+  .layoutNav .shortLogo {
+    font-size: 3rem;
+    margin-right: 7rem; }
+  .layoutNav .filters {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    padding: 1rem;
+    font-size: 0.8rem; }
+    .layoutNav .filters select {
+      width: 60%;
+      margin: 0.5rem;
+      font-size: 0.8rem;
+      border-radius: 20px; }
+    .layoutNav .filters .greenbutton {
+      padding: 0.5rem;
+      margin: 0 1rem; }
 
 .usercontainer {
   background-image: url(../images/bg.jpg);
@@ -186,7 +204,8 @@ a {
     color: #ffffff;
     padding: 2rem;
     text-align: center;
-    border-bottom: 1px solid #ffffff; }
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 1rem; }
 
 .offerCard {
   background-color: #6abcba;
@@ -203,11 +222,14 @@ a {
     cursor: pointer; }
   .offerCard img {
     border-radius: 15px;
-    border: 1px solid black; }
+    border: 1px solid black;
+    width: 100%; }
 
 .offerDetails {
   width: 75%;
-  padding: 7rem 5rem 5rem 5rem; }
+  height: 100vh;
+  padding: 7rem 5rem 5rem 5rem;
+  overflow: auto; }
   .offerDetails h1 {
     border-bottom: 4px solid #0c1b1b;
     padding-bottom: 1rem; }
@@ -216,18 +238,6 @@ a {
     height: 450px;
     border: 1px solid black;
     border-radius: 10px; }
-
-.filters {
-  background-color: #ffffff;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-bottom: 1px solid black; }
-  .filters select {
-    width: 100%;
-    margin: 0.5rem;
-    font-size: 1rem;
-    border-radius: 20px; }
 
 .userOfferContainer {
   display: flex;

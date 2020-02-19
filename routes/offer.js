@@ -12,6 +12,10 @@ router.get("/", (req, res, next) => {
   })
 });
 
+router.get('/newoffer', (req,res,next) => {
+  res.render('offer/newOffer')
+});
+
 router.get('/:id', (req,res,next) => {
   Offer.findById(req.params.id)
   .populate('user')
@@ -20,11 +24,15 @@ router.get('/:id', (req,res,next) => {
   });
 });
 
-router.get('/:city', (req,res,next) => {
-  let city = req.params.city
-  Offer.find(city, city)
-  .then((foundOffer) =>{
-    res.json(foundOffer);
+router.get('/?city=city&job=job', (req,res,next) => {
+
+  let city = req.query.city
+  let job = req.query.job
+  console.log(city)
+  console.log(job)
+  Offer.find({city: city, job: job})
+  .then((foundOffers) =>{
+    res.json(foundOffers);
   });
 });
 

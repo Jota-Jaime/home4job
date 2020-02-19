@@ -9,7 +9,28 @@
 </head>
 <body>
   <nav class="layoutNav">
-    <a href="/">Home</a>
+    <a class="shortLogo" href="/">Home4Job</a>
+    <div class="filters">
+    <button id="navFilter" class="greenbutton" onclick="filterOffers()">Filtrar</button>
+    <label for="cities">Ciudad</label>
+      <select name="city" class="citySelector" value="">
+        <option value="all">Todas</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Valencia">Valencia</option>
+        <option value="Sevilla">Sevilla</option>
+        <option value="Bilbao">Bilbao</option>
+        <option value="Zamora">Zamora</option>
+      </select>
+      <label for="jobs">Trabajos</label>
+      <select name="job" class="jobSelector" value="">
+        <option value="all">Todas</option>
+        <option value="Jardineria">Jardinería</option>
+        <option value="Limpieza">Limpeza</option>
+        <option value="Reparacion">Reparación</option>
+        <option value="Cuidador">Cuidador</option>
+      </select>
+    </div>
     <a href="/auth/login">Login</a>
     <a href="/auth/signup">Signup</a>
     <a href="/auth/logout">Logout</a>

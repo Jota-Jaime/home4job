@@ -166,6 +166,31 @@ a {
     margin: 3rem;
     color: #3D8785;
   }
+  .shortLogo {
+    font-size: 3rem;
+    margin-right: 7rem;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    padding: 1rem;
+    font-size: 0.8rem;
+  
+    select {
+     width: 60%; 
+     margin: 0.5rem;
+     font-size: 0.8rem;
+     border-radius: 20px;
+    }
+  
+    .greenbutton {
+    padding: 0.5rem;
+    margin: 0 1rem;
+    }
+  }
 }
 
 .usercontainer {
@@ -228,6 +253,7 @@ a {
     padding: 2rem;
     text-align: center;
     border-bottom: 1px solid #ffffff;
+    margin-bottom: 1rem;
   }
 }
 
@@ -250,13 +276,16 @@ a {
 
   img {
     border-radius: 15px;
-    border: 1px solid black
+    border: 1px solid black;
+    width: 100%;
   }
 }
 
 .offerDetails {
   width: 75%;
+  height: 100vh;
   padding: 7rem 5rem 5rem 5rem;
+  overflow: auto;
 
   h1 {
     border-bottom: 4px solid #0c1b1b;
@@ -270,20 +299,6 @@ a {
     border-radius: 10px;
   }
   
-}
- .filters {
-  background-color: #ffffff;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-bottom: 1px solid black;
-
-  select {
-   width: 100%; 
-   margin: 0.5rem;
-   font-size: 1rem;
-   border-radius: 20px;
-  }
 }
 
 .userOfferContainer {
