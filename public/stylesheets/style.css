@@ -309,7 +309,6 @@ a {
         .usercontain form div .left .name {
           flex-direction: row;
           justify-content: space-around;
-          border: solid red;
           display: flex; }
           .usercontain form div .left .name .text {
             justify-content: right;
@@ -317,7 +316,6 @@ a {
             font-size: 1rem;
             padding-left: 0.5rem;
             border-radius: 10px;
-            border: solid red;
             justify-content: left; }
       .usercontain form div .right {
         display: flex;

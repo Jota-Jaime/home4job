@@ -380,17 +380,14 @@ a {
         .name{
           flex-direction: row;
           justify-content: space-around;
-          border: solid red;
           display: flex;
 
           .text{
             justify-content: right;
             width: 80%;
-            // height: 20%;
             font-size: 1rem;
             padding-left: 0.5rem;
             border-radius: 10px;
-            border: solid red;
             justify-content: left;
           }
         }
