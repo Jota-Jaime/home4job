@@ -6,7 +6,7 @@ const Offer = require("../models/Offer");
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
-router.get("/", (req, res, next) => {
+router.get("/all", (req, res, next) => {
   Offer.find().then((allOffers) => {
     res.render("offer/home", {allOffers});
   })
@@ -24,14 +24,31 @@ router.get('/:id', (req,res,next) => {
   });
 });
 
-router.get('/?city=city&job=job', (req,res,next) => {
 
+
+router.get('/', (req,res,next) => {
   let city = req.query.city
   let job = req.query.job
-  console.log(city)
-  console.log(job)
+  if (city === "all") {
+    Offer.find({job: job})
+    .then((foundOffers) =>{
+    res.json(foundOffers);
+  });
+  }
+  if (job === "all") {
+    Offer.find({city: city})
+    .then((foundOffers) =>{
+    res.json(foundOffers);
+  });
+  }
+  if (city !== "all" && job !== "all") {
   Offer.find({city: city, job: job})
   .then((foundOffers) =>{
+    res.json(foundOffers);
+  });
+  }
+  Offer.find()
+  .then((foundOffers) => {
     res.json(foundOffers);
   });
 });

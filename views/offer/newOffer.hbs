@@ -1,5 +1,5 @@
-<section class="usercontain">
-  <form action="/auth/newUser" method="POST" id="" enctype="multipart/form-data">
+<section class="newOfferContainer">
+  <form action="/offer/all" method="POST" id="" enctype="multipart/form-data">
   <h1>INTRODUCE LOS DETALLES DE TU LA NUEVA OFERTA</h1>
     <label for="city">¿En qué ciudad quieres publicar la oferta?</label>
     <select name="city" class="citySelector" value="">
@@ -18,14 +18,8 @@
       <option value="Cuidador">Cuidador</option>
     </select>
     <label for="addres">Introduce la dirección de la vivienda</label>
-    <input type="text">
-    <div class="photo">
-      <label>Galería</label>
-      <img src="/images/default.png" alt="default">
-      <img src="{{user.imgPath}}" alt="{{user.name}}">
-      <input type="file" name="photo">
-    </div>
-    <button type="submit"></button>
+    <input id="searchTextField" type="text">
+    <button class="greenbutton" type="submit">Añadir fotos</button>
   </form>
 </section>
 

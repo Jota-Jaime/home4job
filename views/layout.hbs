@@ -9,9 +9,8 @@
 </head>
 <body>
   <nav class="layoutNav">
-    <a class="shortLogo" href="/">Home4Job</a>
+    <a class="shortLogo" href="/offer/all">Home<span>4</span>Job</a>
     <div class="filters">
-    <button id="navFilter" class="greenbutton" onclick="filterOffers()">Filtrar</button>
     <label for="cities">Ciudad</label>
       <select name="city" class="citySelector" value="">
         <option value="all">Todas</option>
@@ -30,6 +29,7 @@
         <option value="Reparacion">Reparación</option>
         <option value="Cuidador">Cuidador</option>
       </select>
+    <button id="navFilter" class="greenbutton" onclick="filterOffers()">Filtrar</button>  
     </div>
     <a href="/auth/login">Login</a>
     <a href="/auth/signup">Signup</a>
@@ -42,6 +42,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw3SoJoThRGXGkcLRYqKTxCwZ6_dWxaJQ&callback=initMap"
     async defer></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/javascripts/newOffer.js"></script>
   <script src="/javascripts/offerDetails.js"></script>
   <script src="/javascripts/script.js"></script>
 </body>

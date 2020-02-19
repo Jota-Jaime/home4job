@@ -4,7 +4,7 @@
     <a href="/user">user</a>
   <div class="foundOffers">
     {{#each allOffers}}
-    <div class="offerCard">
+    <div class="offerCard" onclik="getOfferDetails()">
       <h3>{{city}}<span>    ({{job}})</span></h3>
       <img src="{{photo}}" alt="offerPhoto">
         <form action="" class="offerdetailsSelector">
