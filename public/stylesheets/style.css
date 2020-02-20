@@ -210,6 +210,8 @@ a {
 
 .offerCard {
   background-color: #6abcba;
+  margin-left: 1rem;
+  margin-right: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 15px;

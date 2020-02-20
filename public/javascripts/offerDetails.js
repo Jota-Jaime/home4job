@@ -87,8 +87,17 @@ function filterOffers () {
     offerFoundsContainer.innerHTML = "";
     let offersPayload = offers.data;
     console.log(offersPayload)
+
+    if(offersPayload.length === 0) {
+      let offerCard = document.createElement('div');
+      offerCard.classList.add('offerCard');
+      offerCard.innerHTML =
+      `<h3>¡Lo sentimos!</h3>
+      <p>No tenemos ninguna oferta publicada con las características que buscas, prueba a realizar una nueva.</p>`
+      offerFoundsContainer.appendChild(offerCard);
+    }
     offersPayload.forEach(offer => {
-      
+
       let offerCard = document.createElement('div');
       offerCard.classList.add('offerCard');
       offerCard.innerHTML =
@@ -100,8 +109,6 @@ function filterOffers () {
       offerFoundsContainer.appendChild(offerCard);
     })
     offerCardsArray = document.querySelectorAll(`.offerCard`)
-    
     setListeners()
-    
   })
 }
