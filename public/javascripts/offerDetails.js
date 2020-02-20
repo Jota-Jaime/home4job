@@ -66,14 +66,23 @@ function setListeners(){
       userAvatar.setAttribute("src", `${offerPayload.user.imgPath}`);
       userOfferContainer.appendChild(userAvatar);
 
+      let MsgContainer = document.createElement(`div`);
+      MsgContainer.innerHTML =
+      `<h1>ESCRIBE UN MENSAJE AL ANFITRION</h1>`
+      offerDetails.appendChild(MsgContainer);
+
+
+
       let buttonContainer = document.createElement('div');
       offerDetails.appendChild(buttonContainer)
 
       let applyButton = document.createElement('a');
       applyButton.classList.add('greenbutton');
-      applyButton.innerHTML = "Inscribirse";
+      applyButton.innerHTML = "Contactar";
       applyButton.setAttribute('href','/offer/contact');
       buttonContainer.appendChild(applyButton);
+
+      
     }) 
   });
   })
