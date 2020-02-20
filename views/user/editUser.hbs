@@ -1,6 +1,6 @@
 <section class="usercontain">
-  <div class="colu">
-    <form action="/user/editUser/{{foundUser.id}}" method="POST" id="form-container">
+  <div class="profile">
+    <form action="/user/editUser/{{foundUser.id}}" method="POST" id="form-contain">
       <h2>Edita tu cuenta en unos segundos</h2>
       <div class="tot">
         <div class="left">
@@ -31,17 +31,17 @@
           </div>
         </div>
         <div class="right">
-          <div class="descripcion">
+          <div class="descripcio">
             <label for="description">Descripcion</label>
-            <textarea name="description" for="description" id="" cols="60" rows="6"
-              maxlength="300">{{foundUser.description}}</textarea>
+            <textarea name="description" for="description" id="" cols="100" rows="6"
+              maxlength="300" >{{foundUser.description}}</textarea>
           </div>
 
         </div>
       </div>
       <button class="greenbutton">Crear</button>
       <br>
-      <a href="/user/editUser/{{foundUser.id}}">back</a>
+      <a href="/user/{{foundUser.id}}">back</a>
       {{#if message }}
       <div class="error-message">{{ message }}</div>
       {{/if}}
@@ -49,10 +49,9 @@
 
 
     <form action="/user/editUser/photo/{{foundUser.id}}" method="POST" enctype="multipart/form-data">
-
-        <input type="file" name="photo"></input>
-        <button class="greenbutton">Subir Foto</button>
+      <input type="file" name="photo"></input>
+      <button class="greenbutton">Subir Foto</button>
     </form>
-    
+
   </div>
 </section>

@@ -76,6 +76,8 @@ router.post("/signup", uploadCloud.single("photo"), (req, res, next) => {
   });
 });
 
+
+
 router.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/");

@@ -10,11 +10,11 @@ const uploadCloud = require('../config/cloudinary.js');
 const multer = require('multer');
 
 router.get(`/`, (req, res, next) => {
-  let user = req.user
-  res.redirect(`/user`, {
+  res.redirect(`/auth/login`, {
     user
   })
 });
+
 
 router.post("/editUser/photo/:id", uploadCloud.single('photo'), (req, res, next) => {
   User.findByIdAndUpdate(req.params.id, {
