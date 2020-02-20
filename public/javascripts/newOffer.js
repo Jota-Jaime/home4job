@@ -1,3 +1,5 @@
+let payload;
+
 function init() {
   var map = new google.maps.Map(document.getElementById("map-canvas"), {
     center: {
@@ -24,14 +26,12 @@ function init() {
           position: place.geometry.location
         });
 
-        let payload = {
-          
+        payload = {
+          city: document.querySelector('.citySelector').value,
+          job: document.querySelector('.jobSelector').value,
           lat: place.geometry.location.lat(),
           lng: place.geometry.location.lng(),
         };
-        debugger;
-
-        axios.post("/rutadelform", payload);
 
         marker.bindTo("map", searchBox, "map");
         google.maps.event.addListener(marker, "map_changed", function() {
@@ -48,3 +48,9 @@ function init() {
   });
 }
 google.maps.event.addDomListener(window, "load", init);
+
+document.querySelector('.submit').addEventListener('click', function (){
+  axios.post("/offer/newoffer", payload);
+  window.load
+})
+

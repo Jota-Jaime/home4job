@@ -5,7 +5,10 @@ const User = require("../models/User");
 const Offer = require("../models/Offer");
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
-const nodemailer = require("nodemailer")
+const nodemailer = require("nodemailer");
+const ensureLogin = require("connect-ensure-login");
+const uploadCloud = require('../config/cloudinary.js');
+const multer = require('multer');
 
 router.get('/', (req,res,next) => {
   let city = req.query.city
@@ -72,7 +75,8 @@ router.post('/newoffer', (req,res,next) => {
   const newOffer = new Offer({
     city: req.body.city,
     job: req.body.job,
-    location
+    location: [req.body.lat, req.body.lng],
+    user: user.id
   })
   Offer.create(newOffer)
   .then((createdOffer) => {
@@ -80,8 +84,20 @@ router.post('/newoffer', (req,res,next) => {
   })
 });
 
-router.get('/newOffer/gallery',(req,res,next) => {
+router.get('/newoffer/gallery',(req,res,next) => {
   res.render('offer/gallery')
+})
+
+router.post('/newoffer/gallery/:id', (req, res, next) => {
+  const id = req.params.id;
+  Offer.findByIdAndUpdate(id, {
+    imgPath: req.file.url
+  }, {
+    new: true
+  })
+  .then(() =>{
+    res.redirect('offer/all')
+  });
 })
 
 router.get('/:id', (req,res,next) => {

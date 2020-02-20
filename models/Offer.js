@@ -12,7 +12,7 @@ const userSchema = new Schema({
     type: [String],
     enum: ["Jardineria", "Limpieza", "Reparacion","Cuidador"],
   },
-  photo: {
+  imgPath: {
     type: String,
     default: `../images/nophoto.jpg`
   },

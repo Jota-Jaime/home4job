@@ -390,7 +390,6 @@ a {
       width: 20%;
       margin-top: 2rem; }
 
-<<<<<<< HEAD
 .newOfferForm {
   display: flex; }
 
@@ -398,7 +397,7 @@ a {
   border: 1px solid black;
   width: 300px;
   height: 300px; }
-=======
+
 .profile {
   background-color: #ffffff;
   width: 80%;
@@ -478,6 +477,5 @@ a {
 
 .textito {
   font-size: 2rem; }
->>>>>>> 8cb501b394527152cf9a1a9a580363402c5c541b
 
 /*# sourceMappingURL=style.css.map */

@@ -58,8 +58,7 @@ function setListeners(){
       userInfoContainer.classList.add('userInfoContainer');
       userInfoContainer.innerHTML =
       `<p>Nombre: ${offerPayload.user.name}</p>
-      <p>Descripción: ${offerPayload.user.description}</p>
-      <p>Valoración: ${offerPayload.user.avarageValue}</p>`
+      <p>Descripción: ${offerPayload.user.description}</p>`
       userOfferContainer.appendChild(userInfoContainer)
 
       let userAvatar = document.createElement('img');
@@ -70,8 +69,6 @@ function setListeners(){
       MsgContainer.innerHTML =
       `<h1>ESCRIBE UN MENSAJE AL ANFITRION</h1>`
       offerDetails.appendChild(MsgContainer);
-
-
 
       let buttonContainer = document.createElement('div');
       offerDetails.appendChild(buttonContainer)
