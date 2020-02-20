@@ -41,8 +41,11 @@ function setListeners(){
           zoom: 17
         });
         let marker = new google.maps.Marker({
-          position: {lat: offerPayload.location[0], lng: offerPayload.location[1]}, map: map,},
-          );
+          position: {lat: offerPayload.location[0], lng: offerPayload.location[1]},
+          map: map,
+          animation: google.maps.Animation.DROP
+        },
+        );
       } 
       offerDetails.appendChild(mapDOMEl);
       initMap();

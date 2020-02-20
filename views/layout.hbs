@@ -10,27 +10,7 @@
 <body>
   <nav class="layoutNav">
     <a class="shortLogo" href="/offer/all">Home<span>4</span>Job</a>
-    <div class="filters">
-    <label for="cities">Ciudad</label>
-      <select name="city" class="citySelector" value="">
-        <option value="all">Todas</option>
-        <option value="Madrid">Madrid</option>
-        <option value="Barcelona">Barcelona</option>
-        <option value="Valencia">Valencia</option>
-        <option value="Sevilla">Sevilla</option>
-        <option value="Bilbao">Bilbao</option>
-        <option value="Zamora">Zamora</option>
-      </select>
-      <label for="jobs">Trabajos</label>
-      <select name="job" class="jobSelector" value="">
-        <option value="all">Todas</option>
-        <option value="Jardineria">Jardinería</option>
-        <option value="Limpieza">Limpeza</option>
-        <option value="Reparacion">Reparación</option>
-        <option value="Cuidador">Cuidador</option>
-      </select>
-    <button id="navFilter" class="greenbutton" onclick="filterOffers()">Filtrar</button>  
-    </div>
+    <a href="/user/{{user.id}}">Perfil</a>
     <a href="/auth/login">Login</a>
     <a href="/auth/signup">Signup</a>
     <a href="/auth/logout">Logout</a>
@@ -39,8 +19,7 @@
   <footer class="footer">
     <p>Realizado con ❤️ en IronHack ;)</p>
   </footer>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw3SoJoThRGXGkcLRYqKTxCwZ6_dWxaJQ&callback=initMap"
-    async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&key=AIzaSyCIKcutXqBanOM_6wsHLBL51dbYcnCa03I"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="/javascripts/newOffer.js"></script>
   <script src="/javascripts/offerDetails.js"></script>

@@ -1,25 +1,30 @@
 <section class="newOfferContainer">
-  <form action="/offer/all" method="POST" id="" enctype="multipart/form-data">
+  <form class="newOfferForm">
   <h1>INTRODUCE LOS DETALLES DE TU LA NUEVA OFERTA</h1>
-    <label for="city">¿En qué ciudad quieres publicar la oferta?</label>
-    <select name="city" class="citySelector" value="">
-      <option value="Madrid">Madrid</option>
-      <option value="Barcelona">Barcelona</option>
-      <option value="Valencia">Valencia</option>
-      <option value="Sevilla">Sevilla</option>
-      <option value="Bilbao">Bilbao</option>
-      <option value="Zamora">Zamora</option>
-    </select>
-    <label for="job">¿Qué tipo de trabajo solicitas?</label>
-    <select name="job" class="jobSelector" value="">
-      <option value="Jardineria">Jardinería</option>
-      <option value="Limpieza">Limpeza</option>
-      <option value="Reparacion">Reparación</option>
-      <option value="Cuidador">Cuidador</option>
-    </select>
-    <label for="addres">Introduce la dirección de la vivienda</label>
-    <input id="searchTextField" type="text">
-    <button class="greenbutton" type="submit">Añadir fotos</button>
+    <div class="selectors">
+      <label for="city">¿En qué ciudad quieres publicar la oferta?</label>
+      <select name="city" class="citySelector" value="">
+        <option value="Madrid">Madrid</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Valencia">Valencia</option>
+        <option value="Sevilla">Sevilla</option>
+        <option value="Bilbao">Bilbao</option>
+        <option value="Zamora">Zamora</option>
+      </select>
+      <label for="job">¿Qué tipo de trabajo solicitas?</label>
+      <select name="job" class="jobSelector" value="">
+        <option value="Jardineria">Jardinería</option>
+        <option value="Limpieza">Limpeza</option>
+        <option value="Reparacion">Reparación</option>
+        <option value="Cuidador">Cuidador</option>
+      </select>
+    </div>
+    <div class="address">
+      <label for="addres">Introduce la dirección de la vivienda</label>
+      <input id="pac-input" class="controls" type="text"/>
+      <div id=map-canvas></div
+    </div>
+  <button class="greenbutton" type="submit">Añadir fotos</button>
   </form>
 </section>
 

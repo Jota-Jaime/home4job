@@ -60,6 +60,23 @@ router.get('/newoffer', (req,res,next) => {
   res.render('offer/newOffer')
 });
 
+router.post('/newoffer', (req,res,next) => {
+  const user = req.user;
+  const newOffer = new Offer({
+    city: req.body.city,
+    job: req.body.job,
+    location
+  })
+  Offer.create(newOffer)
+  .then((createdOffer) => {
+    res.render('offer/gallery', {createdOffer, user})
+  })
+});
+
+router.get('/newOffer/gallery',(req,res,next) => {
+  res.render('offer/gallery')
+})
+
 router.get('/:id', (req,res,next) => {
   Offer.findById(req.params.id)
   .populate('user')
@@ -67,10 +84,5 @@ router.get('/:id', (req,res,next) => {
     res.json(foundOffer);
   });
 });
-
-
-
-
-
 
 module.exports = router;

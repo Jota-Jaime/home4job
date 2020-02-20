@@ -16,8 +16,6 @@ const userSchema = new Schema({
     type: String,
     default: `../images/nophoto.jpg`
   },
-  dayStart: Date,
-  dayEnd: Date,
   status: {
     type: [String],
     enum: ["active", "in process", "end"],
