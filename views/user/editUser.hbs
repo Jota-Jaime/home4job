@@ -1,54 +1,58 @@
 <section class="usercontain">
-
-
-  <form action="/user/editUser/{{foundUser.id}}" method="POST" id="form-container" enctype="multipart/form-data">
-
-    <h2>Edita tu perfil</h2>
-    <div class="tot">
-      <div class="left">
-        <div class="name">
-          <div class="izq">
-            <label for="name">Nombre</label>
+  <div class="colu">
+    <form action="/user/editUser/{{foundUser.id}}" method="POST" id="form-container">
+      <h2>Edita tu cuenta en unos segundos</h2>
+      <div class="tot">
+        <div class="left">
+          <div class="name">
+            <div class="izq">
+              <label for="name">Nombre</label>
+            </div>
+            <div>
+              <input id="name" type="text" name="name" placeholder="Insert your name" class="text"
+                value="{{foundUser.name}}"> </div>
           </div>
-          <div>
-            <input id="name" type="text" name="name" placeholder="Insert your name" class="text"
-              value="{{foundUser.name}}">
+
+          <div class="idioma">
+            <div class="izq">
+              <label for="">Idioma</label>
+            </div>
+            <div class="tr">
+              <ul class="ul">
+                <li><input type="checkbox" id="español" name="languages" value="español">Español</li>
+                <li><input type="checkbox" id="ingles" name="languages" value="inglés">Ingles </li>
+                <li><input type="checkbox" id="frances" name="languages" value="francés">Frances</li>
+                <li> <input type="checkbox" id="aleman" name="languages" value="alemán">Aleman</li>
+                <li><input type="checkbox" id="portugues" name="languages" value="portugués">Portugues</li>
+                <li><input type="checkbox" id="italiano" name="languages" value="italiano">Italiano</li>
+                <li><input type="checkbox" id="otros" name="languages" value="otros">Otros</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="idioma">
-          <div class="izq">
-            <label for="">Idioma</label>
+        <div class="right">
+          <div class="descripcion">
+            <label for="description">Descripcion</label>
+            <textarea name="description" for="description" id="" cols="60" rows="6"
+              maxlength="300">{{foundUser.description}}</textarea>
           </div>
-          <div class="tr">
-            <ul class="ul">
-              <li><input type="checkbox" id="español" name="languages" value="español">Español</li>
-              <li><input type="checkbox" id="ingles" name="languages" value="inglés">Ingles </li>
-              <li><input type="checkbox" id="frances" name="languages" value="francés">Frances</li>
-              <li> <input type="checkbox" id="aleman" name="languages" value="alemán">Aleman</li>
-              <li><input type="checkbox" id="portugues" name="languages" value="portugués">Portugues</li>
-              <li><input type="checkbox" id="italiano" name="languages" value="italiano">Italiano</li>
-              <li><input type="checkbox" id="otros" name="languages" value="otros">Otros</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        {{!-- <div class="photo">
-          <label>Foto</label>
-          <img src="{{foundUser.imgPath}}" alt="{{foundUser.name}}">
-          <input type="file" name="photo">
-        </div> --}}
-        <div class="descripcion">
-          <label for="description">Descripcion</label>
-          <textarea name="description" for="description" id="" cols="60" rows="6" 
-            maxlength="300">{{foundUser.description}}</textarea>
+
         </div>
       </div>
-    </div>
-    <button class="greenbutton">Editar</button>
-    {{#if message }}
-    <div class="error-message">{{ message }}</div>
-    {{/if}}
-  </form>
+      <button class="greenbutton">Crear</button>
+      <br>
+      <a href="/user/editUser/{{foundUser.id}}">back</a>
+      {{#if message }}
+      <div class="error-message">{{ message }}</div>
+      {{/if}}
+    </form>
+
+
+    <form action="/user/editUser/photo/{{foundUser.id}}" method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="photo"></input>
+        <button class="greenbutton">Subir Foto</button>
+    </form>
+    
+  </div>
 </section>
-<a href="/user/editUser/{{user.id}}">back</a>

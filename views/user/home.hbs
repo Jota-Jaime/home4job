@@ -1,25 +1,32 @@
+<section class="usercontainer">
+  <div class="profile">
+    <h1>perfil usuario</h1>
+    <div>
+      <div class="left">
+        <div>
+          <label for="text">Nombre</label>
+          <h1>{{foundUser.name}}</h1>
+        </div>
 
+        <label for="text">Idiomas</label>
+        <div>{{foundUser.languages}}</div>
+      </div>
 
-
-<section class="usercontain">
-  <h1>perfil usuario</h1>
-{{#each foundUser}}
-<div>
-  <img src="{{imgPath}}" alt="{{name}}">
+      <div class="right">
+        <div class="photo">
+          <label for="text">Photo</label>
+          <img src="{{foundUser.imgPath}}" alt="{{foundUser.name}}">
+        </div>
+        <div class="description">
+          <label for="text">Descripcion</label>
+          <p class="textarea">{{foundUser.description}}</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="/user/editUser/{{foundUser.id}}" class="greenbutto">EDIT</a>
+      <a href="/offer/all" class="greenbutto">back</a>
+    </div>
   </div>
-<div>
-  <h1>{{name}}</h1>
-</div>
-<div>
-  <p>{{decription}}</p>
-</div>
-<div>{{languages}}</div>
 
-{{/each}}
 </section>
-
-
-
-<a href="/user/editUser/{{foundUser.id}}">EDIT</a>
-<a href="/offer/all">back</a>
- 
