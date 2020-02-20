@@ -7,8 +7,10 @@ const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
 router.get("/all", (req, res, next) => {
+  let user=req.user
   Offer.find().then((allOffers) => {
     res.render("offer/home", { allOffers, user});
+    // res.json(user)
   })
 });
 
@@ -29,6 +31,7 @@ router.get('/:id', (req,res,next) => {
 router.get('/', (req,res,next) => {
   let city = req.query.city
   let job = req.query.job
+  let user = req.body
   if (city === "all") {
     Offer.find({job: job})
     .then((foundOffers) =>{

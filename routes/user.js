@@ -9,28 +9,27 @@ const ensureLogin = require("connect-ensure-login")
 const uploadCloud = require('../config/cloudinary.js');
 const multer = require('multer');
 
-// router.get(`/`, (req, res, next) => {
-//   let user = req.user
-//   res.redirect(`/user`, {user})
-// });
+router.get(`/`, (req, res, next) => {
+  let user = req.user
+  res.redirect(`/user`, {user})
+});
 
 router.get('/:id', ensureLogin.ensureLoggedIn(), (req, res, next) => {
-  let {
-    id
-  } = req.params
-  let user = req.user
+  let {id} = req.params
   User.findById(id)
     .then((foundUser) => {
-      res.render(`user/home`, {foundUser,user})
+      res.render(`user/home`, {foundUser})
+      // res.json(foundUser)
     });
 });
 
 
 router.get('/editUser/:id', ensureLogin.ensureLoggedIn(), (req, res, next) => {
-  let {id} = req.params
+let {id} = req.params
   User.findById(id)
     .then((foundUser) => {
       res.render(`user/editUser`, {foundUser})
+      // res.json(foundUser)
     });
 });
 
@@ -47,7 +46,7 @@ router.post('/editUser/:id', uploadCloud.single("photo"), (req, res, next) => {
       new: true
     })
     .then(() => {
-      res.redirect(`/offer`);
+      res.redirect(`/offer/all`);
       // res.json(user)
     });
 });

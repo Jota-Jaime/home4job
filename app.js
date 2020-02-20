@@ -73,12 +73,13 @@ app.use(session({
 }))
 app.use(flash());
 require('./passport')(app);
+
+const userRoutes = require('./routes/user');
+app.use('/user', userRoutes);
     
 const offerRoutes = require('./routes/offer');
 app.use('/offer', offerRoutes);
       
-const userRoutes = require('./routes/user');
-app.use('/user', userRoutes);
 
 const index = require('./routes/index');
 app.use('/', index);
