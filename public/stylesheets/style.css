@@ -390,7 +390,6 @@ a {
       width: 20%;
       margin-top: 2rem; }
 
-<<<<<<< HEAD
 .newOfferForm {
   display: flex; }
 
@@ -398,7 +397,7 @@ a {
   border: 1px solid black;
   width: 300px;
   height: 300px; }
-=======
+
 .profile {
   background-color: #ffffff;
   width: 80%;
@@ -416,68 +415,67 @@ a {
   text-align: center;
   font-size: 1.3rem;
   height: 80%; }
-  .profile div {
+  .profile .greenbutto {
+    background-color: #3D8785;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 1rem;
+    transition: all .7s; }
+    .profile .greenbutto:hover {
+      background-color: #0c1b1b;
+      cursor: pointer; }
+  .profile .tot {
     font-size: 2rem;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     height: 80%; }
-    .profile div .right {
+    .profile .tot .right {
+      display: flex;
+      flex-direction: column;
+      height: 90%;
+      width: 50%;
+      justify-content: space-around; }
+      .profile .tot .right .photo {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+        height: 40%; }
+        .profile .tot .right .photo img {
+          width: 50%;
+          height: 50%; }
+      .profile .tot .right .description {
+        flex-direction: column;
+        height: 60%; }
+        .profile .tot .right .description .textarea {
+          font-size: 1.4rem;
+          border: solid gray 1px;
+          height: 80%; }
+    .profile .tot .left {
       display: flex;
       flex-direction: column;
       height: 100%;
       width: 50%;
       justify-content: space-around; }
-      .profile div .right .photo {
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-        justify-content: center;
-        align-items: center;
-        height: 40%; }
-        .profile div .right .photo img {
-          width: 50%;
-          height: 50%; }
-      .profile div .right .description {
-        flex-direction: column;
-        height: 50%;
-        border: solid red;
-        font-size: 1.4rem;
-        border: solid gray 1px; }
-    .profile div .left {
-      display: flex;
-      flex-direction: column;
-      height: 50%;
-      width: 50%;
-      justify-content: center;
-      border: solid red; }
-    .profile div .greenbutto {
-      background-color: #3D8785;
-      font-size: 1.5rem;
-      color: #ffffff;
-      font-weight: 700;
-      width: 20%;
-      text-align: center;
-      border-radius: 20px;
-      border: 1px solid black;
-      padding: 1rem;
-      transition: all .7s;
-      margin: 5px; }
-      .profile div .greenbutto:hover {
-        background-color: #0c1b1b;
-        cursor: pointer; }
 
-.colu {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px; }
-  .colu .ep {
-    border: solid red;
+.edit {
+  border: green solid; }
+  .edit .descripcio {
+    border: green solid;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     height: 100%; }
-
-.textito {
-  font-size: 2rem; }
->>>>>>> 8cb501b394527152cf9a1a9a580363402c5c541b
+    .edit .descripcio textarea {
+      width: 80%;
+      height: 60%; }
 
 /*# sourceMappingURL=style.css.map */

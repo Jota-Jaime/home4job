@@ -516,10 +516,27 @@ a {
   font-size: 1.3rem;
   height: 80%;
 
+  .greenbutto {
+    background-color: #3D8785;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 1rem;
+    transition: all .7s;
+    &:hover {
+      background-color: #0c1b1b;
+      cursor:pointer;
+    }
+  }
   
-  div{
+  .tot{
     font-size: 2rem;
     display: flex;
+
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -528,14 +545,14 @@ a {
     .right{
       display: flex;
       flex-direction: column;
-      height: 100%;
+      height: 90%;
       width: 50%;
       justify-content: space-around;
 
       .photo{
         display: flex;
         flex-direction: column;
-        width: 30%;
+        width: 40%;
         justify-content:center;
         align-items: center;
         height: 40%;
@@ -548,52 +565,39 @@ a {
       }
       .description{
         flex-direction: column;
-        height: 50%;
-        border: solid red;
+        height: 60%;
+        .textarea{
           font-size: 1.4rem;
           border: solid gray 1px;
-        
+          height: 80%;
+        }
       }
     }
     .left{
       display: flex;
       flex-direction: column;
-      height: 50%;
+      height: 100%;
       width: 50%;
-      justify-content: center;  
-      border: solid red;
+      justify-content: space-around;
       
    }
-   .greenbutto {
-    background-color: #3D8785;
-    font-size: 1.5rem;
-    color: #ffffff;
-    font-weight: 700;
-    width: 20%;
-    text-align: center;
-    border-radius: 20px;
-    border: 1px solid black;
-    padding: 1rem;
-    transition: all .7s;
-    margin: 5px;
-    &:hover {
-      background-color: #0c1b1b;
-      cursor:pointer;
+}
+}
+
+.edit{
+border: green solid;
+
+
+
+  .descripcio{
+    border: green solid;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    textarea{
+      width:80% ;
+      height:60%;
     }
   }
-}
-}
-
-.colu{
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  .ep{
-    border: solid red;
-    height: 100%;
-  }
-}
-
-.textito {
-  font-size: 2rem;
 }

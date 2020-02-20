@@ -1,7 +1,7 @@
 <section class="usercontainer">
   <div class="profile">
     <h1>perfil usuario</h1>
-    <div>
+    <div class="tot">
       <div class="left">
         <div>
           <label for="text">Nombre</label>
@@ -15,11 +15,15 @@
       <div class="right">
         <div class="photo">
           <label for="text">Photo</label>
-          <img src="{{foundUser.imgPath}}" alt="{{foundUser.name}}">
+          <div>
+            <img src="{{foundUser.imgPath}}" alt="{{foundUser.name}}">
+          </div>
         </div>
         <div class="description">
           <label for="text">Descripcion</label>
-          <p class="textarea">{{foundUser.description}}</p>
+          <div class="textarea">
+            <p>{{foundUser.description}}</p>
+          </div>
         </div>
       </div>
     </div>
