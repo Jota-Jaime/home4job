@@ -13,28 +13,34 @@ function init() {
   // map.controls[google.maps.ControlPosition.TOP_CENTER].push(
   //   document.getElementById("pac-input")
   // );
-  google.maps.event.addListener(searchBox, "places_changed", function() {
+  google.maps.event.addListener(searchBox, "places_changed", function () {
     searchBox.set("map", null);
 
     var places = searchBox.getPlaces();
 
     var bounds = new google.maps.LatLngBounds();
     var i, place;
-    for (i = 0; (place = places[i]); i++) {
-      (function(place) {
+    for (i = 0;
+      (place = places[i]); i++) {
+      (function (place) {
         var marker = new google.maps.Marker({
           position: place.geometry.location
         });
 
         payload = {
+          imgPath: document.querySelector(".photoed"),
           city: document.querySelector('.citySelector').value,
           job: document.querySelector('.jobSelector').value,
           lat: place.geometry.location.lat(),
           lng: place.geometry.location.lng(),
         };
 
+        payload.append("image", imgPath.files[0])
+
+        // console.log(payload)
+
         marker.bindTo("map", searchBox, "map");
-        google.maps.event.addListener(marker, "map_changed", function() {
+        google.maps.event.addListener(marker, "map_changed", function () {
           if (!this.getMap()) {
             this.unbindAll();
           }
@@ -49,7 +55,9 @@ function init() {
 }
 google.maps.event.addDomListener(window, "load", init);
 
-document.querySelector('.submit').addEventListener('click', function (){
+document.querySelector('.submit').addEventListener('click', function () {
+  console.log(payload)
+  debugger
   axios.post("/offer/newoffer", payload);
 })
 

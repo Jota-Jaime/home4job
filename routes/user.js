@@ -23,6 +23,7 @@ router.post("/editUser/photo/:id", uploadCloud.single('photo'), (req, res, next)
       new: true
     })
     .then(() => {
+      console.log(req.file.url)
       res.redirect(`/offer/all`);
       // res.json(user)
     });

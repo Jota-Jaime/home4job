@@ -9,6 +9,8 @@ const nodemailer = require("nodemailer");
 const ensureLogin = require("connect-ensure-login");
 const uploadCloud = require('../config/cloudinary.js');
 const multer = require('multer');
+// const uploader = require(`../config/cloudinary-setup`)
+
 
 router.get('/', (req,res,next) => {
   let city = req.query.city
@@ -69,35 +71,54 @@ router.get('/newoffer', (req,res,next) => {
   res.render('offer/newOffer')
 });
 
-router.post('/newoffer', (req,res,next) => {
+router.post('/newoffer',uploadCloud.single('photo'), (req,res,next) => {
+  console.log("hola")
   const user = req.user;
   const newOffer = new Offer({
     city: req.body.city,
     job: req.body.job,
     location: [req.body.lat, req.body.lng],
-    user: user.id
+    user: user.id,
+    imgPath: req.file.url
   })
+  console.log(newOffer)
   Offer.create(newOffer)
   .then((createdOffer) => {
-    res.render('offer/gallery', {createdOffer, user})
+    // console.log(createdOffer)
+    res.render('offer/all', {createdOffer, user})
   })
 });
 
-router.get('/newoffer/gallery',(req,res,next) => {
-  res.render('offer/gallery')
-})
 
-router.post('/newoffer/gallery/:id', (req, res, next) => {
-  const id = req.params.id;
-  Offer.findByIdAndUpdate(id, {
-    imgPath: req.file.url
-  }, {
-    new: true
-  })
-  .then(() =>{
-    res.redirect('offer/all')
-  });
-})
+
+
+
+// router.post('/upload', uploader.single("imageUrl"), (req, res, next) => {
+//   // console.log('file is: ', req.file)
+//   if (!req.file) {
+//     next(new Error('No file uploaded!'));
+//     return;
+//   }
+//   // get secure_url from the file object and save it in the 
+//   // variable 'secure_url', but this can be any name, just make sure you remember to use the same in frontend
+//   res.json({ secure_url: req.file.secure_url });
+// })
+
+// router.get('/newoffer/gallery',(req,res,next) => {
+//   res.render('offer/gallery')
+// })
+
+// router.post('/newoffer/gallery',uploadCloud.single('photo'), (req, res, next) => {
+//   console.log(req.params.id)
+//   Offer.findByIdAndUpdate(req.params.id, {
+//     imgPath: req.file.url
+//   }, {
+//     new: true
+//   })
+//   .then(() =>{
+//     res.redirect('/offer/all')
+//   });
+// })
 
 router.get('/:id', (req,res,next) => {
   Offer.findById(req.params.id)

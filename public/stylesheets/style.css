@@ -384,6 +384,7 @@ a {
     .edit .descripcio textarea {
       width: 80%;
       height: 60%; }
+<<<<<<< HEAD
 
 .errorContainer {
   background-image: url(../images/bg.jpg);
@@ -402,5 +403,7 @@ a {
     padding: 4rem;
     border-radius: 20px;
     border: 1px solid black; }
+=======
+>>>>>>> 83f8c28fbf282d24b6c0166330b18dd82e32e243
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 <section class="newOfferContainer">
-  <form class="newOfferForm">
+  <form class="newOfferForm"   enctype="multipart/form-data">
   <h1>INTRODUCE LOS DETALLES DE TU LA NUEVA OFERTA</h1>
     <div class="selectors">
       <label for="city">¿En qué ciudad quieres publicar la oferta?</label>
@@ -22,10 +22,19 @@
     <div class="address">
       <label for="addres">Introduce la dirección de la vivienda</label>
       <input id="pac-input" class="controls" type="text"/>
-      <div id=map-canvas></div
+      <div id=map-canvas></div>
+       <div class="photo">
+      
+      <label>Añade una fotografía de la vivienda</label>
+      <input class="photoed" type="file" name="photo" id="file-id">
     </div>
-  <a class="greenbutton submit" href="/offer/newoffer/gallery">Siguiente</a>
+    </div>
+    
+  <a class="greenbutton submit" href="/offer/all">Siguiente</a>
   </form>
+   
+   
+ 
 </section>
 
 

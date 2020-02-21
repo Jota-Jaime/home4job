@@ -1,8 +1,9 @@
 <section class="usercontain">
-  <form action="/newoffer/gallery/{{_id}}" method="POST">
+  <form action="/offer/newoffer/gallery" method="POST" enctype="multipart/form-data">
     <div class="photo">
+      <h1>ESTA ES MI PUTA ID: {{createdOffer._id}}</h1>
       <label>Añade una fotografía de la vivienda</label>
-      <input class=""type="file" name="photo">
+      <input class="" type="file" name="photo">
       <button class="greenbutton" type="submit">Guardar</button>
     </div>
   </form>
