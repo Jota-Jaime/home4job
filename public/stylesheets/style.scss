@@ -1,7 +1,6 @@
 // primary color: #3D8785
 // primary dark : #0c1b1b
-// primary light: #6abcba
-
+// primary light: #6abcbax
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:800&display=swap');
 
 * {
@@ -18,7 +17,7 @@ body {
   height: 5rem;
   position: fixed;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   margin: auto, 4rem;
   background-color: #3D8785;
@@ -32,6 +31,13 @@ body {
     &:hover{
       opacity: 0.9;
   }
+.landingLogo {
+  font-size: 2rem;
+  width: 60%;
+  span {
+    color: #0c1b1b
+  }
+}
 
   a {
     font-size: 1.3rem;
@@ -69,60 +75,15 @@ a {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   
-  form {
-    font-size: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin: 0 5rem;
-    padding: 2rem;
-    background-color: white;
-    opacity: .9;
-    border-radius: 20px;
-    border: 0.5px solid black;
-    -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-    box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-
-    .citySelector {
-      display: flex;
-      justify-content: space-between;
-      
-      select {
-        width: 50%;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-      }
-    }
-    .dates {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-      width: 100%;
-
-      input {
-        font-size: 1rem;
-      }
-    }
-    .jobToDo {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-
-      select {
-        width: 50%;
-        font-size: 1rem;
-      }
-    }
-  }
   .info {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    margin: 0 5rem;
+    align-items: center;
+    width: 80vh;
+    margin: 0.5rem;
     padding: 2rem;
     background-color: white;
     opacity: .9;
@@ -131,9 +92,14 @@ a {
     -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
     box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
+
+    a {
+      padding: 0rem;
+      margin-top: 1rem;
+    }
+    
   }
 }
-
 .footer {
   background-color: #0c1b1b;
   color: #ffffff;
@@ -143,7 +109,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 .layoutNav {
   width: 100%;
   height: 5rem;
@@ -168,33 +133,43 @@ a {
   .shortLogo {
     font-size: 3rem;
     margin-right: 7rem;
+    width: 60%;
 
     span {
       color: #0c1b1b
     }
   }
-  
-  .filters {
+}
+
+.filters {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 40%;
+    width: 100%;
     padding: 1rem;
     font-size: 0.8rem;
-  
+    background-color: #ffffff;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid black;
+
+    label {
+      width: 20%;
+      font-size: 1rem;
+    }
     select {
-     width: 60%; 
+     width: 50%; 
      margin: 0.5rem;
      font-size: 0.8rem;
      border-radius: 20px;
     }
   
     .greenbutton {
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 0 1rem;
+    width: 30%;
     }
-  }
 }
+
 
 .usercontainer {
   background-image: url(../images/bg.jpg);
@@ -255,8 +230,7 @@ a {
     color: #ffffff;
     padding: 2rem;
     text-align: center;
-    border-bottom: 1px solid #ffffff;
-    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
   }
 }
 
@@ -291,6 +265,10 @@ a {
   padding: 7rem 5rem 5rem 5rem;
   overflow: auto;
 
+  .offerDetailsContainer {
+    background-color: #ffffff;
+  }
+
   h1 {
     border-bottom: 4px solid #0c1b1b;
     padding-bottom: 1rem;
@@ -307,7 +285,11 @@ a {
 
 .userOfferContainer {
   display:flex;
-  margin: 1rem 0;
+  justify-content: space-around;
+  margin: 2rem 0;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 1rem;
 
   .userInfoContainer {
     width: 70%;
@@ -315,16 +297,34 @@ a {
   }
 
   img {
-    position: 50% 50%;
-    width: 25%;
+    width: 15%;
+    border-radius: 50%;
+    border: 3px solid #0c1b1b
   }
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+
+  .greenbutton {
+    width: 20%;
+  }
+}
+.profileData{
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  label {
+    color: #0c1b1b;
+  }
+}
 .usercontain {
   background-image: url(../images/bg.jpg);
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -335,108 +335,77 @@ a {
     width: 80%;
     border-radius: 20px;
     border: 1px solid black;
-    padding: 2rem;
-    margin-top: 3rem;
+    margin: 7rem 0;
     -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
     box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    text-align: center;
     font-size: 1.3rem;
-    height: 80%;
+    height: autp;
+
+    .form {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem 2rem;
+    }
 
     .greenbutton{
       width: 20%;
-      margin-bottom: -15px;
     }
-    div{
-      font-size: 2rem;
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      height: 80%;
-      .left{
+    .left {
+      width: 50%;
+      .text{
         display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 50%;
-        justify-content: space-around;
-        .izq{
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        label{
           width: 30%;
-          justify-content: left;
-          padding-left: 10px;
         }
-        .idioma{
+        input {
+          border-radius: 10px;
           font-size: 1rem;
-          height: 40%;
-          display: flex;
-          justify-content: left;
-          align-items: center;
-  
-         .tr{
-           flex-direction: row;
-           justify-content: left;
-           font-size: 1rem;
-           width: 40%;
-           height: 60%;
-           list-style: none;
-           .ul{
-            justify-content: space-around;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            list-style: none;
-            flex-wrap: wrap;
-            width: 100%;
-            height: 100%;
-          }
-         } 
+          padding: 0.5rem 1rem 0.5rem 1rem;
         }
-        .name{
-          flex-direction: row;
-          justify-content: space-around;
-          display: flex;
-
-          .text{
-            justify-content: right;
-            width: 80%;
-            font-size: 1rem;
-            padding-left: 0.5rem;
-            border-radius: 10px;
-            justify-content: left;
+      }
+      .languages {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        label {
+          width: 22%;
+        }
+        ul {
+          list-style: none;
+          border: 1px solid black;
+          border-radius: 15px;
+          padding: 1rem;
+          font-size: 1rem;
+          li{
+            margin-bottom: 0.2rem;
           }
         }
       }
-  
-      .right{
-        display: flex;
-        flex-direction: column;
-        height: 50%;
-        width: 50%;
-        justify-content: center;  
-        .descripcion{
-          flex-direction: column;
-          height: 100%;
-          textarea{
-            font-size: 1.5rem;
-          }
-        }
-        .photo{
-          display: flex;
-          flex-direction: column;
-          width: 30%;
-          justify-content:space-between;
-          align-items: center;
-          height: 60%;
-          img{
-            width: 60%;
-            height: 60%;
-          }
-        }
+    }
+    .right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 1rem;
+      label {
+        margin-bottom: 1rem;
+      }
+      textarea {
+        width: 80%;
+        height: 80%;
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-radius: 10px;
       }
     }
   }
@@ -498,92 +467,6 @@ a {
   height: 300px;
 }
 
-.profile{
-  background-color: #ffffff;
-  width: 80%;
-  border-radius: 20px;
-  border: 1px solid black;
-  padding: 2rem;
-  margin-top: 3rem;
-  -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-  box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  font-size: 1.3rem;
-  height: 80%;
-
-  .greenbutto {
-    background-color: #3D8785;
-    font-size: 1.5rem;
-    color: #ffffff;
-    font-weight: 700;
-    width: 50%;
-    text-align: center;
-    border-radius: 20px;
-    border: 1px solid black;
-    padding: 1rem;
-    transition: all .7s;
-    &:hover {
-      background-color: #0c1b1b;
-      cursor:pointer;
-    }
-  }
-  
-  .tot{
-    font-size: 2rem;
-    display: flex;
-
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-   
-    .right{
-      display: flex;
-      flex-direction: column;
-      height: 90%;
-      width: 50%;
-      justify-content: space-around;
-
-      .photo{
-        display: flex;
-        flex-direction: column;
-        width: 40%;
-        justify-content:center;
-        align-items: center;
-        height: 40%;
-
-        img{
-          
-          width: 50%;
-          height: 50%;
-        }
-      }
-      .description{
-        flex-direction: column;
-        height: 60%;
-        .textarea{
-          font-size: 1.4rem;
-          border: solid gray 1px;
-          height: 80%;
-        }
-      }
-    }
-    .left{
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: 50%;
-      justify-content: space-around;
-      
-   }
-}
-}
-
 .edit{
 border: green solid;
 
@@ -599,5 +482,26 @@ border: green solid;
       width:80% ;
       height:60%;
     }
+  }
+}
+
+.errorContainer {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 4rem;
+    border-radius: 20px;
+    border: 1px solid black
   }
 }

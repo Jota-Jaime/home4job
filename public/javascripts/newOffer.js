@@ -51,6 +51,5 @@ google.maps.event.addDomListener(window, "load", init);
 
 document.querySelector('.submit').addEventListener('click', function (){
   axios.post("/offer/newoffer", payload);
-  window.load
 })
 

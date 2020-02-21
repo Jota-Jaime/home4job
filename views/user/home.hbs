@@ -1,26 +1,32 @@
-<section class="usercontainer">
-  <div class="profile">
-    <h1>perfil usuario</h1>
-    <div class="tot">
+<section class="usercontain">
+  <form>
+    <h1>Perfil</h1>
+    <div class="form profileData">
       <div class="left">
         <div>
           <label for="text">Nombre</label>
-          <h1>{{foundUser.name}}</h1>
+          <p>{{foundUser.name}}</p>
         </div>
-
-        <label for="text">Idiomas</label>
-        <div>{{foundUser.languages}}</div>
+        <div>
+          <label for="text">Idiomas</label>
+          <div>{{foundUser.languages}}</div>
+        </div>
+        <div>
+          <label for="text">Descripción</label>
+          <div class="textarea">
+            <p>{{foundUser.description}}</p>
+          </div>
+        </div>
       </div>
-
       <div class="right">
         <div class="photo">
-          <label for="text">Photo</label>
+          <label for="text">Foto</label>
           <div>
             <img src="{{foundUser.imgPath}}" alt="{{foundUser.name}}">
           </div>
         </div>
         <div class="description">
-          <label for="text">Descripcion</label>
+          <label for="text">Descripción</label>
           <div class="textarea">
             <p>{{foundUser.description}}</p>
           </div>
@@ -28,9 +34,9 @@
       </div>
     </div>
     <div>
-      <a href="/user/editUser/{{foundUser.id}}" class="greenbutto">EDIT</a>
-      <a href="/offer/all" class="greenbutto">back</a>
+      <a href="/user/editUser/{{foundUser.id}}" class="greenbutton">Editar</a>
+      <a href="/offer/all" class="greenbutton">Volver</a>
     </div>
-  </div>
+  </form>
 
 </section>

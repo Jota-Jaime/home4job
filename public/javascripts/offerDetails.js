@@ -16,21 +16,25 @@ function setListeners(){
       let offerPayload = offer.data;
       offerDetails.innerHTML = "";
 
+      let divDOMEl = document.createElement('div');
+      divDOMEl.classList.add('.offerDetailsContainer');
+      offerDetails.appendChild(divDOMEl);
+
       let h1DOMEl = document.createElement('h1');
       h1DOMEl.innerHTML = `Oferta Home4Job`;
-      offerDetails.appendChild(h1DOMEl);
+      divDOMEl.appendChild(h1DOMEl);
       
       let h2DOMEl = document.createElement('h2');
       h2DOMEl.innerHTML = `${offerPayload.city}`;
-      offerDetails.appendChild(h2DOMEl);
+      divDOMEl.appendChild(h2DOMEl);
 
       let pDOMEl = document.createElement('p');
       pDOMEl.innerHTML = `Publicada por: ${offerPayload.user.name}`;
-      offerDetails.appendChild(pDOMEl);
+      divDOMEl.appendChild(pDOMEl);
 
       let h3DOMEl = document.createElement('h3');
       h3DOMEl.innerHTML = `Tipo de trabajo a realizar: ${offerPayload.job}`;
-      offerDetails.appendChild(h3DOMEl);
+      divDOMEl.appendChild(h3DOMEl);
 
       let mapDOMEl = document.createElement('div');
       mapDOMEl.setAttribute("id", "map");
@@ -47,18 +51,19 @@ function setListeners(){
         },
         );
       } 
-      offerDetails.appendChild(mapDOMEl);
+      divDOMEl.appendChild(mapDOMEl);
       initMap();
 
       let userOfferContainer = document.createElement(`div`);
       userOfferContainer.classList.add('userOfferContainer');
-      offerDetails.appendChild(userOfferContainer);
+      divDOMEl.appendChild(userOfferContainer);
 
       let userInfoContainer = document.createElement('div');
       userInfoContainer.classList.add('userInfoContainer');
       userInfoContainer.innerHTML =
       `<p>Nombre: ${offerPayload.user.name}</p>
-      <p>Descripción: ${offerPayload.user.description}</p>`
+      <p>Descripción: ${offerPayload.user.description}</p>
+      <p>Idiomas: ${offerPayload.user.languages}.</p>`
       userOfferContainer.appendChild(userInfoContainer)
 
       let userAvatar = document.createElement('img');
@@ -67,11 +72,12 @@ function setListeners(){
 
       let MsgContainer = document.createElement(`div`);
       MsgContainer.innerHTML =
-      `<h1>ESCRIBE UN MENSAJE AL ANFITRION</h1>`
-      offerDetails.appendChild(MsgContainer);
+      `<h1>Escribe un mensaje a ${offerPayload.user.name}</h1>`
+      divDOMEl.appendChild(MsgContainer);
 
       let buttonContainer = document.createElement('div');
-      offerDetails.appendChild(buttonContainer)
+      buttonContainer.classList.add('buttonContainer');
+      divDOMEl.appendChild(buttonContainer)
 
       let applyButton = document.createElement('a');
       applyButton.classList.add('greenbutton');

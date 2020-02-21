@@ -18,9 +18,8 @@ router.get('/', (req,res,next) => {
   if (city === "all" && job === "all")
   Offer.find()
   .then((foundOffers) => {
-    console.log(foundOffers)
-    res.json(foundOffers);
-  
+    console.log(`Empiezo aquí:${foundOffers}`)
+    res.json(foundOffers);  
   })
   .catch(err => console.log(err))
 

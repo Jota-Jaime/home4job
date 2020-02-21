@@ -1,60 +1,45 @@
 <section class="usercontain">
   <form action="/auth/signup" method="POST" id="form-container" enctype="multipart/form-data">
+    <div class="tittle"> 
     <h2>Crea tu cuenta en unos segundos</h2>
-    <div class="tot">
+    </div>
+    <div class="form">
       <div class="left">
-        <div class="name">
-          <div class="izq">
-            <label for="username">Email</label>
-          </div>
+        <div class="text">
+          <label for="username">Email</label>
           <input id="username" type="email" name="username" placeholder="Introduce tu email..." class="text">
         </div>
-        <div class="name">
-          <div class="izq">
-            <label for="password">Password</label>
-          </div>
+        <div class="text">
+          <label for="password">Contraseña</label>
           <input id="password" type="password" name="password" placeholder="Introduce tu contraseña..." class="text">
         </div>
-        <div class="name">
-          <div class="izq">
-            <label for="name">Nombre</label>
-          </div>
-          <div>
-            <input id="name" type="text" name="name" placeholder="Insert your name" class="text">
-          </div>
+        <div class="text">
+          <label for="name">Nombre</label>
+          <input id="name" type="text" name="name" placeholder="Insert your name" class="text">
         </div>
-
-        <div class="idioma">
-          <div class="izq">
-            <label for="">Idioma</label>
-          </div>
-          <div class="tr">
-            <ul class="ul">
-              <li><input type="checkbox" id="español" name="languages" value="español">Español</li>
-              <li><input type="checkbox" id="ingles" name="languages" value="inglés">Ingles </li>
-              <li><input type="checkbox" id="frances" name="languages" value="francés">Frances</li>
-              <li> <input type="checkbox" id="aleman" name="languages" value="alemán">Aleman</li>
-              <li><input type="checkbox" id="portugues" name="languages" value="portugués">Portugues</li>
-              <li><input type="checkbox" id="italiano" name="languages" value="italiano">Italiano</li>
-              <li><input type="checkbox" id="otros" name="languages" value="otros">Otros</li>
-            </ul>
-          </div>
+        <div class="languages">
+          <label for="">Idioma</label>
+          <ul class="ul">
+            <li><input type="checkbox" id="español" name="languages" value="español">Español</li>
+            <li><input type="checkbox" id="ingles" name="languages" value="inglés">Inglés </li>
+            <li><input type="checkbox" id="frances" name="languages" value="francés">Francés</li>
+            <li><input type="checkbox" id="aleman" name="languages" value="alemán">Alemán</li>
+            <li><input type="checkbox" id="portugues" name="languages" value="portugués">Portugués</li>
+            <li><input type="checkbox" id="italiano" name="languages" value="italiano">Italiano</li>
+            <li><input type="checkbox" id="otros" name="languages" value="otros">Otros</li>
+          </ul>
         </div>
       </div>
       <div class="right">
-        <div class="descripcion">
-          <label for="description">Descripcion</label>
+          <label for="description">Descripción</label>
           <textarea name="description" for="description" id="" cols="40" rows="6"
-            placeholder="Escribe algo sobre ti en ..." maxlength="300" value></textarea>
-        </div>
-
+            placeholder="Escribe algo sobre ti en ..." maxlength="300"></textarea>
       </div>
     </div>
     <button class="greenbutton">Crear</button>
     {{#if message }}
     <div class="error-message">{{ message }}</div>
     {{/if}}
-
     <p class="account-message">
       ¿Ya tienes una cuenta?
       <a href="/auth/login">Inciar sesión</a>

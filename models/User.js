@@ -4,7 +4,7 @@ const Schema   = mongoose.Schema;
 const userSchema = new Schema({
   username: {
     type: String,
-    unique:true,
+    unique: true,
     required: true
   },
   password: String,
@@ -14,10 +14,6 @@ const userSchema = new Schema({
     default: `../images/default.png`
   },
   description: String,
-  avarageValue: {
-    type: String,
-    default: `Sin experiencias previas.`
-  },
   languages: {
     type: [String],
     enum: [`español`, `inglés`, `portugués`, `francés`, `alemán`, `italiano`, `otro`]

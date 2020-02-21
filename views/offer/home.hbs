@@ -2,7 +2,8 @@
 <div class="aside">
   <a class="newOfferLink"href="/offer/newoffer">Publicar una nueva oferta +</a>
   <div class="filters">
-    <label for="cities">Ciudad</label>
+    <div class="selectorsContainer">
+      <label for="cities">Ciudad</label>
       <select name="city" class="citySelector" value="">
         <option value="all">Todas</option>
         <option value="Madrid">Madrid</option>
@@ -20,6 +21,7 @@
         <option value="Reparacion">Reparación</option>
         <option value="Cuidador">Cuidador</option>
       </select>
+      </div>
     <button id="navFilter" class="greenbutton" onclick="filterOffers()">Filtrar</button>  
   </div>
   <div class="foundOffers">
