@@ -117,7 +117,7 @@ function filterOffers () {
       offerCard.classList.add('offerCard');
       offerCard.innerHTML =
       `<h3>${offer.city[0]}<span> (${offer.job[0]})</span></h3>
-      <img src="${offer.photo}" alt="offerPhoto">
+      <img src="${offer.imgPath}" alt="offerPhoto">
       <form action="" class="offerdetailsSelector">
       <input type="hidden" class="id" value="${offer._id}">
       </form>`
