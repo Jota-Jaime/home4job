@@ -34,11 +34,11 @@ router.get('/:id', ensureLogin.ensureLoggedIn(), (req, res, next) => {
     id
   } = req.params
   User.findById(id)
-    .then((foundUser) => {
+    .then((user) => {
       res.render(`user/home`, {
-        foundUser
+        user
       })
-      // res.json(foundUser)
+      // res.json(user)
     });
 });
 
@@ -48,11 +48,11 @@ router.get('/editUser/:id', ensureLogin.ensureLoggedIn(), (req, res, next) => {
     id
   } = req.params
   User.findById(id)
-    .then((foundUser) => {
+    .then((user) => {
       res.render(`user/editUser`, {
-        foundUser
+        user
       })
-      // res.json(foundUser)
+      // res.json(user)
     });
 });
 

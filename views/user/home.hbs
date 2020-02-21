@@ -7,26 +7,34 @@
       <div class="left">
         <div class="profileInput">
           <label for="text">Nombre</label>
-          <p>{{foundUser.name}}</p>
+          <p>{{user.name}}</p>
         </div>
         <div class="profileInput">
           <label for="text">Idiomas</label>
-          <p>{{foundUser.languages}}</p>
+          <div>{{user.languages}}</div>
         </div>
         <div class="profileInput">
           <label for="text">Descripción</label>
           <div class="textarea">
-            <p>{{foundUser.description}}</p>
+            <p>{{user.description}}</p>
           </div>
         </div>
       </div>
       <div class="right">
         <div class="profilePhoto">
           <label for="text">Foto</label>
-          <img src="{{foundUser.imgPath}}" alt="{{foundUser.name}}">
+          <div>
+            <img src="{{user.imgPath}}" alt="{{user.name}}">
+          </div>
+        </div>
+        <div class="description">
+          <label for="text">Descripción</label>
+          <div class="textarea">
+            <p>{{user.description}}</p>
+          </div>
         </div>
         <div class="linksContainer">
-          <a href="/user/editUser/{{foundUser.id}}" class="greenbutton">Editar</a>
+          <a href="/user/editUser/{{user.id}}" class="greenbutton">Editar</a>
           <a href="/offer/all" class="greenbutton">Volver</a>
       </div>
       </div>
