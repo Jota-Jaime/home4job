@@ -145,7 +145,7 @@ router.post('/contact', (req, res, next) => {
 
   transporter.sendMail({
     from: '"Home4Job " <myawesome@project.com>',
-    to: ``, 
+    to: `hackmerla@gmail.com`, 
     subject: `Home4Job - Tienes una nueva solicitud `, 
     text: message,
     html: `<b>Hola!!! Desde el equipo de Home4Job le informamos que tiene una mensaje de ${user.name} a una de sus ofertas publicadas:<br>${message}</b>`
