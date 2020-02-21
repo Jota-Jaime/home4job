@@ -12,6 +12,7 @@ const session    = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 const flash      = require("connect-flash");
 const multer  = require('multer');
+const cors  = require("cors");
     
 
 mongoose
@@ -59,6 +60,10 @@ hbs.registerHelper('ifUndefined', (value, options) => {
   }
 });
   
+app.use(cors({
+  // this could be multiple domains/origins, but we will allow just our React app
+  origin: [ "http://localhost:3000" ]
+}));
 
 // default value for title local
 app.locals.title = 'Home4Job - Titulo en curso!';
