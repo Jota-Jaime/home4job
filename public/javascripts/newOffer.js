@@ -10,9 +10,7 @@ function init() {
   });
 
   var searchBox = new google.maps.places.SearchBox(document.getElementById("pac-input"));
-  // map.controls[google.maps.ControlPosition.TOP_CENTER].push(
-  //   document.getElementById("pac-input")
-  // );
+
   google.maps.event.addListener(searchBox, "places_changed", function () {
     searchBox.set("map", null);
 
@@ -24,7 +22,8 @@ function init() {
       (place = places[i]); i++) {
       (function (place) {
         var marker = new google.maps.Marker({
-          position: place.geometry.location
+          position: place.geometry.location,
+          animation: google.maps.Animation.DROP
         });
 
         payload = {
@@ -35,7 +34,7 @@ function init() {
           lng: place.geometry.location.lng(),
         };
 
-        payload.append("image", imgPath.files[0])
+        // payload.append("image", imgPath.files[0])
 
         // console.log(payload)
 

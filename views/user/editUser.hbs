@@ -1,57 +1,46 @@
 <section class="usercontain">
-  <div class="profile">
-    <form action="/user/editUser/{{foundUser.id}}" method="POST" id="form-contain">
+  <form action="/user/editUser/{{foundUser.id}}" method="POST" id="form-contain">
+    <div class="tittle">    
       <h2>Edita tu cuenta en unos segundos</h2>
-      <div class="tot">
-        <div class="left">
-          <div class="name">
-            <div class="izq">
-              <label for="name">Nombre</label>
-            </div>
-            <div>
-              <input id="name" type="text" name="name" placeholder="Insert your name" class="text"
-                value="{{foundUser.name}}"> </div>
-          </div>
-
-          <div class="idioma">
-            <div class="izq">
-              <label for="">Idioma</label>
-            </div>
-            <div class="tr">
-              <ul class="ul">
-                <li><input type="checkbox" id="español" name="languages" value="español">Español</li>
-                <li><input type="checkbox" id="ingles" name="languages" value="inglés">Ingles </li>
-                <li><input type="checkbox" id="frances" name="languages" value="francés">Frances</li>
-                <li> <input type="checkbox" id="aleman" name="languages" value="alemán">Aleman</li>
-                <li><input type="checkbox" id="portugues" name="languages" value="portugués">Portugues</li>
-                <li><input type="checkbox" id="italiano" name="languages" value="italiano">Italiano</li>
-                <li><input type="checkbox" id="otros" name="languages" value="otros">Otros</li>
-              </ul>
-            </div>
-          </div>
+    </div>
+    <div class="form">
+      <div class="left">
+        <div class="profileInput">
+          <label for="name">Nombre</label>
+          <input id="name" type="text" name="name" placeholder="Insert your name" class="text" value="{{foundUser.name}}">
         </div>
-        <div class="right">
-          <div class="descripcio">
-            <label for="description">Descripcion</label>
-            <textarea name="description" for="description" id="" cols="100" rows="6"
-              maxlength="300" >{{foundUser.description}}</textarea>
-          </div>
-
-        </div>
+        <div class="description">
+            <label for="description">Descripción</label>
+            <textarea name="description" for="description" maxlength="300" >{{foundUser.description}}</textarea>
+          </div>  
       </div>
-      <button class="greenbutton">Crear</button>
-      <br>
-      <a href="/user/{{foundUser.id}}">back</a>
-      {{#if message }}
-      <div class="error-message">{{ message }}</div>
-      {{/if}}
-    </form>
+        <div class="right">
+          <div class="languages">
+          <label for="">Idioma</label>
+          <ul class="ul">
+            <li><input type="checkbox" id="español" name="languages" value="español">Español</li>
+            <li><input type="checkbox" id="ingles" name="languages" value="inglés">Inglés</li>
+            <li><input type="checkbox" id="frances" name="languages" value="francés">Francés</li>
+            <li><input type="checkbox" id="aleman" name="languages" value="alemán">Alemán</li>
+            <li><input type="checkbox" id="portugues" name="languages" value="portugués">Portugués</li>
+            <li><input type="checkbox" id="italiano" name="languages" value="italiano">Italiano</li>
+            <li><input type="checkbox" id="otros" name="languages" value="otros">Otros</li>
+          </ul>
+        </div>
+          
 
-
-    <form action="/user/editUser/photo/{{foundUser.id}}" method="POST" enctype="multipart/form-data">
-      <input type="file" name="photo"></input>
-      <button class="greenbutton">Subir Foto</button>
-    </form>
-
-  </div>
+        </div>
+    </div>
+    <div class="linksContainer">
+    <button class="greenbutton">Crear</button>
+    <a class="greenbutton" href="/user/{{foundUser.id}}">Volver</a>
+    {{#if message }}
+    <div class="error-message">{{ message }}</div>
+    {{/if}}
+    </div>
+  </form>
+  <form class="photoLoader" action="/user/editUser/photo/{{foundUser.id}}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="photo"></input>
+    <button class="greenbutton">Subir Foto</button>
+  </form>
 </section>

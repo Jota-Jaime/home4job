@@ -1,17 +1,19 @@
 <section class="usercontain">
   <form>
-    <h1>Perfil</h1>
-    <div class="form profileData">
+    <div class="tittle">
+      <h2>Perfil</h2>
+    </div>
+    <div class="form">
       <div class="left">
-        <div>
+        <div class="profileInput">
           <label for="text">Nombre</label>
           <p>{{foundUser.name}}</p>
         </div>
-        <div>
+        <div class="profileInput">
           <label for="text">Idiomas</label>
-          <div>{{foundUser.languages}}</div>
+          <p>{{foundUser.languages}}</p>
         </div>
-        <div>
+        <div class="profileInput">
           <label for="text">Descripción</label>
           <div class="textarea">
             <p>{{foundUser.description}}</p>
@@ -19,23 +21,15 @@
         </div>
       </div>
       <div class="right">
-        <div class="photo">
+        <div class="profilePhoto">
           <label for="text">Foto</label>
-          <div>
-            <img src="{{foundUser.imgPath}}" alt="{{foundUser.name}}">
-          </div>
+          <img src="{{foundUser.imgPath}}" alt="{{foundUser.name}}">
         </div>
-        <div class="description">
-          <label for="text">Descripción</label>
-          <div class="textarea">
-            <p>{{foundUser.description}}</p>
-          </div>
-        </div>
+        <div class="linksContainer">
+          <a href="/user/editUser/{{foundUser.id}}" class="greenbutton">Editar</a>
+          <a href="/offer/all" class="greenbutton">Volver</a>
       </div>
-    </div>
-    <div>
-      <a href="/user/editUser/{{foundUser.id}}" class="greenbutton">Editar</a>
-      <a href="/offer/all" class="greenbutton">Volver</a>
+      </div>
     </div>
   </form>
 

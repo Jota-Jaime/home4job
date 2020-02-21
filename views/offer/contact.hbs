@@ -1,9 +1,11 @@
 <section class="usercontainer"> 
-<form action="/offer/contact" method="POST">
-  <label for="">Message</label>
-  <textarea type="text" name="message" id="" rows="6" cols="30" maxlength="300" class="textito"></textarea>
-  <button type="submit" class="greenbutton">Submit</button>
-  <a href="/offer/all">back</a>
-</form>
+  <form class="contact" action="/offer/contact" method="POST">
+    <label for="">{{name}}, concatca con el anfitrión</label>
+    <textarea type="text" name="message" id="" rows="6" cols="30" maxlength="300" class="textito"></textarea>
+    <div class="linksContainer">
+      <button type="submit" class="greenbutton">Enviar</button>
+      <a class="greenbutton" href="/offer/all">Volver</a>
+    </div>
+  </form>
 </section>
 

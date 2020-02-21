@@ -109,7 +109,7 @@ a {
     color: #3D8785; }
   .layoutNav .shortLogo {
     font-size: 3rem;
-    margin-right: 7rem;
+    margin-right: 15rem;
     width: 60%; }
     .layoutNav .shortLogo span {
       color: #0c1b1b; }
@@ -208,7 +208,8 @@ a {
   .offerCard img {
     border-radius: 15px;
     border: 1px solid black;
-    width: 100%; }
+    width: 100%;
+    height: 50%; }
 
 .offerDetails {
   width: 75%;
@@ -263,13 +264,14 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 0 2rem; }
   .usercontain form {
     background-color: #ffffff;
     width: 80%;
     border-radius: 20px;
     border: 1px solid black;
-    margin: 7rem 0;
+    margin: 7rem 2rem;
     -webkit-box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 10px 16px -5px rgba(0, 0, 0, 0.75);
@@ -278,14 +280,40 @@ a {
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
-    height: autp; }
+    height: auto; }
     .usercontain form .form {
       display: flex;
       justify-content: space-between;
       width: 100%;
       padding: 1rem 2rem; }
+      .usercontain form .form .profileInput {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 2rem; }
+      .usercontain form .form textarea {
+        width: 100%;
+        height: 8rem; }
+      .usercontain form .form label {
+        color: #3D8785;
+        margin-bottom: 2rem; }
+      .usercontain form .form .profilePhoto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border: 1px solid black; }
+        .usercontain form .form .profilePhoto img {
+          width: 50%;
+          margin-top: 3rem;
+          border-radius: 50%;
+          border: 3px solid #0c1b1b; }
     .usercontain form .greenbutton {
-      width: 20%; }
+      width: 20%;
+      margin: 1rem 0; }
     .usercontain form .left {
       width: 50%; }
       .usercontain form .left .text {
@@ -321,12 +349,36 @@ a {
       margin-left: 1rem; }
       .usercontain form .right label {
         margin-bottom: 1rem; }
+      .usercontain form .right .languages {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+        .usercontain form .right .languages label {
+          margin-right: 1rem; }
+        .usercontain form .right .languages ul {
+          list-style: none;
+          border: 1px solid black;
+          border-radius: 15px;
+          padding: 1rem;
+          font-size: 1rem; }
+          .usercontain form .right .languages ul li {
+            margin-bottom: 0.2rem; }
       .usercontain form .right textarea {
         width: 80%;
         height: 80%;
         font-size: 1rem;
         padding: 0.5rem;
         border-radius: 10px; }
+      .usercontain form .right .linksContainer {
+        display: flex;
+        justify-content: space-around;
+        width: 100%; }
+
+.linksContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1rem; }
 
 .newOfferContainer {
   background-image: url(../images/bg.jpg);
@@ -370,21 +422,9 @@ a {
 
 #map-canvas {
   border: 1px solid black;
-  width: 300px;
-  height: 300px; }
-
-.edit {
-  border: green solid; }
-  .edit .descripcio {
-    border: green solid;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%; }
-    .edit .descripcio textarea {
-      width: 80%;
-      height: 60%; }
-<<<<<<< HEAD
+  border-radius: 15px;
+  width: 90%;
+  height: 92%; }
 
 .errorContainer {
   background-image: url(../images/bg.jpg);
@@ -403,7 +443,49 @@ a {
     padding: 4rem;
     border-radius: 20px;
     border: 1px solid black; }
-=======
->>>>>>> 83f8c28fbf282d24b6c0166330b18dd82e32e243
+
+.photoLoader {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .photoLoader input {
+    margin: 1rem 0;
+    font-size: 1rem;
+    background-color: #6abcba;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid black; }
+
+.newOfferInput {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column; }
+  .newOfferInput input, .newOfferInput select {
+    font-size: 1rem;
+    padding: 0.5rem; }
+
+.contact label {
+  color: #3D8785;
+  margin-bottom: 1rem; }
+
+.contact textarea {
+  width: 100%;
+  height: 15rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 1rem; }
+
+.contact .linksContainer button {
+  width: 30%; }
+
+.contact .linksContainer a {
+  width: 30%; }
 
 /*# sourceMappingURL=style.css.map */

@@ -132,7 +132,7 @@ a {
   }
   .shortLogo {
     font-size: 3rem;
-    margin-right: 7rem;
+    margin-right: 15rem;
     width: 60%;
 
     span {
@@ -251,11 +251,11 @@ a {
     cursor:pointer;
   }
 
-
   img {
     border-radius: 15px;
     border: 1px solid black;
     width: 100%;
+    height: 50%;
   }
 }
 
@@ -329,13 +329,14 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 0 2rem;
 
   form {
     background-color: #ffffff;
     width: 80%;
     border-radius: 20px;
     border: 1px solid black;
-    margin: 7rem 0;
+    margin: 7rem 2rem;
     -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
     box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.75);
@@ -351,10 +352,45 @@ a {
       justify-content: space-between;
       width: 100%;
       padding: 1rem 2rem;
+
+      .profileInput {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+      }
+      textarea {
+        width: 100%;
+        height: 8rem;
+      }
+      label {
+        color: #3D8785;
+        margin-bottom: 2rem;
+      }
+
+      .profilePhoto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border: 1px solid black;
+
+
+        img {
+          width: 50%;
+          margin-top: 3rem;
+          border-radius: 50%;
+          border: 3px solid #0c1b1b
+        }
+      }
     }
 
     .greenbutton{
       width: 20%;
+      margin: 1rem 0 ;
     }
     .left {
       width: 50%;
@@ -400,6 +436,24 @@ a {
       label {
         margin-bottom: 1rem;
       }
+      .languages {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        label {
+          margin-right: 1rem;
+        }
+        ul {
+          list-style: none;
+          border: 1px solid black;
+          border-radius: 15px;
+          padding: 1rem;
+          font-size: 1rem;
+          li{
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
       textarea {
         width: 80%;
         height: 80%;
@@ -407,11 +461,21 @@ a {
         padding: 0.5rem;
         border-radius: 10px;
       }
+      .linksContainer {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
     }
   }
   
 }
-
+.linksContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1rem;
+}
 .newOfferContainer {
   background-image: url(../images/bg.jpg);
   background-size: cover;
@@ -463,26 +527,9 @@ a {
 
 #map-canvas {
   border: 1px solid black;
-  width: 300px;
-  height: 300px;
-}
-
-.edit{
-border: green solid;
-
-
-
-  .descripcio{
-    border: green solid;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    textarea{
-      width:80% ;
-      height:60%;
-    }
-  }
+  border-radius: 15px;
+  width: 90%;
+  height: 92%;
 }
 
 .errorContainer {
@@ -503,5 +550,60 @@ border: green solid;
     padding: 4rem;
     border-radius: 20px;
     border: 1px solid black
+  }
+}
+
+.photoLoader {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    margin: 1rem 0;
+    font-size: 1rem;
+    background-color: #6abcba;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+}
+
+.newOfferInput {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  input, select {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+.contact {
+  label {
+    color: #3D8785;
+    margin-bottom: 1rem;
+  }
+  textarea  {
+    width: 100%;
+    height: 15rem;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .linksContainer{
+    button {
+      width: 30%;
+    }
+    a {
+      width: 30%;
+    }
   }
 }
