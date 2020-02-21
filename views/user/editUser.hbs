@@ -1,5 +1,5 @@
 <section class="usercontain">
-  <form action="/user/editUser/{{foundUser.id}}" method="POST" id="form-contain">
+  <form action="/user/editUser/{{user.id}}" method="POST" id="form-contain">
     <div class="tittle">    
       <h2>Edita tu cuenta en unos segundos</h2>
     </div>
@@ -7,11 +7,11 @@
       <div class="left">
         <div class="profileInput">
           <label for="name">Nombre</label>
-          <input id="name" type="text" name="name" placeholder="Insert your name" class="text" value="{{foundUser.name}}">
+          <input id="name" type="text" name="name" placeholder="Insert your name" class="text" value="{{user.name}}">
         </div>
         <div class="description">
             <label for="description">Descripción</label>
-            <textarea name="description" for="description" maxlength="300" >{{foundUser.description}}</textarea>
+            <textarea name="description" for="description" maxlength="300" >{{user.description}}</textarea>
           </div>  
       </div>
         <div class="right">
@@ -33,13 +33,13 @@
     </div>
     <div class="linksContainer">
     <button class="greenbutton">Crear</button>
-    <a class="greenbutton" href="/user/{{foundUser.id}}">Volver</a>
+    <a class="greenbutton" href="/user/{{user.id}}">Volver</a>
     {{#if message }}
     <div class="error-message">{{ message }}</div>
     {{/if}}
     </div>
   </form>
-  <form class="photoLoader" action="/user/editUser/photo/{{foundUser.id}}" method="POST" enctype="multipart/form-data">
+  <form class="photoLoader" action="/user/editUser/photo/{{user.id}}" method="POST" enctype="multipart/form-data">
     <input type="file" name="photo"></input>
     <button class="greenbutton">Subir Foto</button>
   </form>
