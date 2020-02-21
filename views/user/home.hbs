@@ -5,16 +5,16 @@
       <div class="left">
         <div>
           <label for="text">Nombre</label>
-          <p>{{foundUser.name}}</p>
+          <p>{{user.name}}</p>
         </div>
         <div>
           <label for="text">Idiomas</label>
-          <div>{{foundUser.languages}}</div>
+          <div>{{user.languages}}</div>
         </div>
         <div>
           <label for="text">Descripción</label>
           <div class="textarea">
-            <p>{{foundUser.description}}</p>
+            <p>{{user.description}}</p>
           </div>
         </div>
       </div>
@@ -22,19 +22,19 @@
         <div class="photo">
           <label for="text">Foto</label>
           <div>
-            <img src="{{foundUser.imgPath}}" alt="{{foundUser.name}}">
+            <img src="{{user.imgPath}}" alt="{{user.name}}">
           </div>
         </div>
         <div class="description">
           <label for="text">Descripción</label>
           <div class="textarea">
-            <p>{{foundUser.description}}</p>
+            <p>{{user.description}}</p>
           </div>
         </div>
       </div>
     </div>
     <div>
-      <a href="/user/editUser/{{foundUser.id}}" class="greenbutton">Editar</a>
+      <a href="/user/editUser/{{user.id}}" class="greenbutton">Editar</a>
       <a href="/offer/all" class="greenbutton">Volver</a>
     </div>
   </form>

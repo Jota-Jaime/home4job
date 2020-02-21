@@ -35,7 +35,7 @@ function init() {
           lng: place.geometry.location.lng(),
         };
 
-        payload.append("image", imgPath.files[0])
+        // payload.append("image", imgPath.files[0])
 
         // console.log(payload)
 

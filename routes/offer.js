@@ -62,13 +62,15 @@ router.get("/all", (req, res, next) => {
 });
 
 router.get("/contact", (req, res, next) => {
+  let user=req.user
   Offer.find().then(() => {
-    res.render("offer/contact");
+    res.render("offer/contact", {user});
   })
 });
 
 router.get('/newoffer', (req,res,next) => {
-  res.render('offer/newOffer')
+  let user=req.user
+  res.render('offer/newOffer',{user})
 });
 
 router.post('/newoffer',uploadCloud.single('photo'), (req,res,next) => {
@@ -79,7 +81,7 @@ router.post('/newoffer',uploadCloud.single('photo'), (req,res,next) => {
     job: req.body.job,
     location: [req.body.lat, req.body.lng],
     user: user.id,
-    imgPath: req.file.url
+    // imgPath: req.file.url
   })
   console.log(newOffer)
   Offer.create(newOffer)
@@ -130,6 +132,7 @@ router.get('/:id', (req,res,next) => {
 
 router.post('/contact', (req, res, next) => {
   console.log("hola")
+  let user=req.user
  
   let { email, subject, message } = req.body;
   let transporter = nodemailer.createTransport({
@@ -141,11 +144,11 @@ router.post('/contact', (req, res, next) => {
   });
 
   transporter.sendMail({
-    from: '"My Awesome Project " <myawesome@project.com>',
-    to: "hackmerla@gmail.com", 
+    from: '"Home4Job " <myawesome@project.com>',
+    to: ``, 
     subject: `Home4Job - Tienes una nueva solicitud `, 
     text: message,
-    html: `<b>${message}</b>`
+    html: `<b>Hola!!! Desde el equipo de Home4Job le informamos que tiene una mensaje de ${user.name} a una de sus ofertas publicadas:<br>${message}</b>`
   })
   .then(info => res.redirect('/offer/all'))
   .catch(error => console.log(error));
